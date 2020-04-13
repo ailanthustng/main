@@ -1,7 +1,6 @@
 = Tng Liang Yi, Ailanthus - Project Portfolio
 :site-section: AboutUs
 :imagesDir: ../images
-:imagesDir: ../images/expense-splitter
 :stylesDir: ../stylesheets
 
 == PROJECT: EYLAH
@@ -17,19 +16,6 @@ them keep track of their diet. The user interacts with the application using a C
 == Summary of contributions
 
 * *Major Enhancements*
-
-. *Added Entry and Receipt for Expense Splitter portion of EYLAH*
-(Pull request https://github.com/AY1920S2-CS2103T-W13-1/main/pull/130[#130])
-
-*** *What it does:* +
-Receipt is used to store multiple Entries, and these Entries are used to store the information about a particular Item
-and the Persons involved in splitting the cost of that Item.
-
-*** *Justification:* +
-These classes are required to keep track of Items and the Persons involved for each of that Item.
-
-
-
 
 . *Added AddItemCommand and enhanced the DeleteItemCommand for the Expense Splitter portion of EYLAH*
 (Pull request https://github.com/AY1920S2-CS2103T-W13-1/main/pull/134[#134],
@@ -65,37 +51,6 @@ Hence, a flag was included to prevent this from happening.
 
 
 
-
-
-. *Added DoneReceiptCommand and ClearReceiptCommand for the Expense Splitter portion of EYLAH*
-(Pull request https://github.com/AY1920S2-CS2103T-W13-1/main/pull/201[#201],
-https://github.com/AY1920S2-CS2103T-W13-1/main/pull/204[#204])
-
-*** *What it does:* +
-DoneReceiptCommand marks the Receipt as done and ClearReceiptCommand removes all existing Entries from the Receipt.
-
-*** *Justification:* +
-DoneReceiptCommand is required to toggle the boolean flag of Receipt to be done. ClearReceiptCommand does the opposite
-by toggling the Receipt back as undone.
-
-*** *Highlights:* +
-These commands are required to prevent an Exception being thrown with regards to negative BigDecimal values, as
-explained in the point above.
-
-
-
-. *Added CalculateUtil for EYLAH*
-(Pull request https://github.com/AY1920S2-CS2103T-W13-1/main/pull/191[#191])
-
-*** *What it does:* +
-CalculateUtil does all the handling of calculations required in EYLAH.
-
-*** *Justification:* +
-Abstraction, to make things easier and more streamlined in our application.
-
-
-
-
 * *Minor Enhancements*
 
 . *Removed case sensitivity when adding a new Person*
@@ -126,42 +81,32 @@ from being thrown. In addition, I also did the formatting of the BigDecimal to b
 *** http://www.javapractices.com/topic/TopicAction.do?Id=13 +
 *** https://stackoverflow.com/questions/1359817/using-bigdecimal-to-work-with-currencies
 
-** Added test cases for Entry and Receipt classes
-** Added test cases for AddItemCommand, DeleteItemCommand, DoneReceiptCommand and ClearReceiptCommand
-** Assisted in downscaling of AddressBook3 by removing Phone class
-
 * *Code contributed*: +
 https://nus-cs2103-ay1920s2.github.io/tp-dashboard/#search=ailanthustng&sort=groupTitle&sortWithin=title&since=2020-02-14&timeframe=commit&mergegroup=false&groupSelect=groupByRepos&breakdown=false[Functional and Test code]
-
 
 * *Other contributions*:
 
 ** Project management:
 *** Lead for ExpenseSplitter portion of EYLAH.
-*** Participated in planning the project timeline for EYLAH.
 
 
 ** Enhancements to existing features:
 *** Enhanced ParserUtil to be able to handle more inputted texts and output the required Objects.
-*** Adapted the given Address Book 3 code into EYLAH.
 
 
 ** Documentation:
-*** Updated the Developer Guide to include AddItemCommand and DeleteItemCommand
+*** Updated the Developer Guide to include AddItemCommand, DeleteItemCommand and ClearReceiptCommand
 (Pull request https://github.com/AY1920S2-CS2103T-W13-1/main/pull/164[#164],
 https://github.com/AY1920S2-CS2103T-W13-1/main/pull/171[#171],
 https://github.com/AY1920S2-CS2103T-W13-1/main/pull/353[#353],
+https://github.com/AY1920S2-CS2103T-W13-1/main/pull/409[#409],
+https://github.com/AY1920S2-CS2103T-W13-1/main/pull/359[#359],
 https://github.com/AY1920S2-CS2103T-W13-1/main/pull/409[#409])
-*** Updated the Developer Guide to include ClearReceiptCommand
-(Pull request https://github.com/AY1920S2-CS2103T-W13-1/main/pull/359[#359],
 https://github.com/AY1920S2-CS2103T-W13-1/main/pull/409[#409])
-*** Updated the User Guide to include DoneReceiptCommand and ClearReceipt Command
-(Pull request https://github.com/AY1920S2-CS2103T-W13-1/main/pull/241[#241])
-*** Updated the User Guide to include Appendix H: Effort
-(Pull request https://github.com/AY1920S2-CS2103T-W13-1/main/pull/384[#384])
-*** Updated the User Guide with minor changes with regards to the use of English and to maintain consistency throughout
-the document
-(Pull request https://github.com/AY1920S2-CS2103T-W13-1/main/pull/411[#411])
+*** Updated the User Guide to include DoneReceiptCommand and ClearReceipt Command, as well as Appendix H: Effort
+(Pull request https://github.com/AY1920S2-CS2103T-W13-1/main/pull/241[#241],
+https://github.com/AY1920S2-CS2103T-W13-1/main/pull/384[#384],
+https://github.com/AY1920S2-CS2103T-W13-1/main/pull/411[#411])
 
 
 ** Community:
