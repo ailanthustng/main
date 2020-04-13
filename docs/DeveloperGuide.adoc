@@ -246,6 +246,7 @@ based on their user input.
 //tag::diettrackeractivitydiagram[]
 *Activity Diagram* of Diet Tracker: +
 
+.Diet Tracker Overall Activity Diagram
 image::DietTrackerActivityDiagram.png[]
 //end::diettrackeractivitydiagram[]
 
