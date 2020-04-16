@@ -1,0 +1,2497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.10">
+<title>EYLAH - User Guide</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<style>
+/* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
+/* Uncomment @import statement to use as custom stylesheet */
+/*@import "https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700";*/
+article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section{display:block}
+audio,video{display:inline-block}
+audio:not([controls]){display:none;height:0}
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
+a{background:none}
+a:focus{outline:thin dotted}
+a:active,a:hover{outline:0}
+h1{font-size:2em;margin:.67em 0}
+abbr[title]{border-bottom:1px dotted}
+b,strong{font-weight:bold}
+dfn{font-style:italic}
+hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}
+mark{background:#ff0;color:#000}
+code,kbd,pre,samp{font-family:monospace;font-size:1em}
+pre{white-space:pre-wrap}
+q{quotes:"\201C" "\201D" "\2018" "\2019"}
+small{font-size:80%}
+sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
+sup{top:-.5em}
+sub{bottom:-.25em}
+img{border:0}
+svg:not(:root){overflow:hidden}
+figure{margin:0}
+fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}
+legend{border:0;padding:0}
+button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}
+button,input{line-height:normal}
+button,select{text-transform:none}
+button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}
+button[disabled],html input[disabled]{cursor:default}
+input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}
+button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
+textarea{overflow:auto;vertical-align:top}
+table{border-collapse:collapse;border-spacing:0}
+*,*::before,*::after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
+html,body{font-size:100%}
+body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;font-weight:400;font-style:normal;line-height:1;position:relative;cursor:auto;tab-size:4;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}
+a:hover{cursor:pointer}
+img,object,embed{max-width:100%;height:auto}
+object,embed{height:100%}
+img{-ms-interpolation-mode:bicubic}
+.left{float:left!important}
+.right{float:right!important}
+.text-left{text-align:left!important}
+.text-right{text-align:right!important}
+.text-center{text-align:center!important}
+.text-justify{text-align:justify!important}
+.hide{display:none}
+img,object,svg{display:inline-block;vertical-align:middle}
+textarea{height:auto;min-height:50px}
+select{width:100%}
+.center{margin-left:auto;margin-right:auto}
+.stretch{width:100%}
+.subheader,.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{line-height:1.45;color:#7a2518;font-weight:400;margin-top:0;margin-bottom:.25em}
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6,pre,form,p,blockquote,th,td{margin:0;padding:0;direction:ltr}
+a{color:#2156a5;text-decoration:underline;line-height:inherit}
+a:hover,a:focus{color:#1d4b8f}
+a img{border:0}
+p{font-family:inherit;font-weight:400;font-size:1em;line-height:1.6;margin-bottom:1.25em;text-rendering:optimizeLegibility}
+p aside{font-size:.875em;line-height:1.35;font-style:italic}
+h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{font-family:"Open Sans","DejaVu Sans",sans-serif;font-weight:300;font-style:normal;color:#ba3925;text-rendering:optimizeLegibility;margin-top:1em;margin-bottom:.5em;line-height:1.0125em}
+h1 small,h2 small,h3 small,#toctitle small,.sidebarblock>.content>.title small,h4 small,h5 small,h6 small{font-size:60%;color:#e99b8f;line-height:0}
+h1{font-size:2.125em}
+h2{font-size:1.6875em}
+h3,#toctitle,.sidebarblock>.content>.title{font-size:1.375em}
+h4,h5{font-size:1.125em}
+h6{font-size:1em}
+hr{border:solid #dddddf;border-width:1px 0 0;clear:both;margin:1.25em 0 1.1875em;height:0}
+em,i{font-style:italic;line-height:inherit}
+strong,b{font-weight:bold;line-height:inherit}
+small{font-size:60%;line-height:inherit}
+code{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;color:rgba(0,0,0,.9)}
+ul,ol,dl{font-size:1em;line-height:1.6;margin-bottom:1.25em;list-style-position:outside;font-family:inherit}
+ul,ol{margin-left:1.5em}
+ul li ul,ul li ol{margin-left:1.25em;margin-bottom:0;font-size:1em}
+ul.square li ul,ul.circle li ul,ul.disc li ul{list-style:inherit}
+ul.square{list-style-type:square}
+ul.circle{list-style-type:circle}
+ul.disc{list-style-type:disc}
+ol li ul,ol li ol{margin-left:1.25em;margin-bottom:0}
+dl dt{margin-bottom:.3125em;font-weight:bold}
+dl dd{margin-bottom:1.25em}
+abbr,acronym{text-transform:uppercase;font-size:90%;color:rgba(0,0,0,.8);border-bottom:1px dotted #ddd;cursor:help}
+abbr{text-transform:none}
+blockquote{margin:0 0 1.25em;padding:.5625em 1.25em 0 1.1875em;border-left:1px solid #ddd}
+blockquote cite{display:block;font-size:.9375em;color:rgba(0,0,0,.6)}
+blockquote cite::before{content:"\2014 \0020"}
+blockquote cite a,blockquote cite a:visited{color:rgba(0,0,0,.6)}
+blockquote,blockquote p{line-height:1.6;color:rgba(0,0,0,.85)}
+@media screen and (min-width:768px){h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2}
+h1{font-size:2.75em}
+h2{font-size:2.3125em}
+h3,#toctitle,.sidebarblock>.content>.title{font-size:1.6875em}
+h4{font-size:1.4375em}}
+table{background:#fff;margin-bottom:1.25em;border:solid 1px #dedede}
+table thead,table tfoot{background:#f7f8f7}
+table thead tr th,table thead tr td,table tfoot tr th,table tfoot tr td{padding:.5em .625em .625em;font-size:inherit;color:rgba(0,0,0,.8);text-align:left}
+table tr th,table tr td{padding:.5625em .625em;font-size:inherit;color:rgba(0,0,0,.8)}
+table tr.even,table tr.alt{background:#f8f8f7}
+table thead tr th,table tfoot tr th,table tbody tr td,table tr td,table tfoot tr td{display:table-cell;line-height:1.6}
+h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2;word-spacing:-.05em}
+h1 strong,h2 strong,h3 strong,#toctitle strong,.sidebarblock>.content>.title strong,h4 strong,h5 strong,h6 strong{font-weight:400}
+.clearfix::before,.clearfix::after,.float-group::before,.float-group::after{content:" ";display:table}
+.clearfix::after,.float-group::after{clear:both}
+:not(pre):not([class^=L])>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background:#f7f7f8;-webkit-border-radius:4px;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed;word-wrap:break-word}
+:not(pre)>code.nobreak{word-wrap:normal}
+:not(pre)>code.nowrap{white-space:nowrap}
+pre{color:rgba(0,0,0,.9);font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;line-height:1.45;text-rendering:optimizeSpeed}
+pre code,pre pre{color:inherit;font-size:inherit;line-height:inherit}
+pre>code{display:block}
+pre.nowrap,pre.nowrap pre{white-space:pre;word-wrap:normal}
+em em{font-style:normal}
+strong strong{font-weight:400}
+.keyseq{color:rgba(51,51,51,.8)}
+kbd{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;display:inline-block;color:rgba(0,0,0,.8);font-size:.65em;line-height:1.45;background:#f7f7f7;border:1px solid #ccc;-webkit-border-radius:3px;border-radius:3px;-webkit-box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em white inset;box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em #fff inset;margin:0 .15em;padding:.2em .5em;vertical-align:middle;position:relative;top:-.1em;white-space:nowrap}
+.keyseq kbd:first-child{margin-left:0}
+.keyseq kbd:last-child{margin-right:0}
+.menuseq,.menuref{color:#000}
+.menuseq b:not(.caret),.menuref{font-weight:inherit}
+.menuseq{word-spacing:-.02em}
+.menuseq b.caret{font-size:1.25em;line-height:.8}
+.menuseq i.caret{font-weight:bold;text-align:center;width:.45em}
+b.button::before,b.button::after{position:relative;top:-1px;font-weight:400}
+b.button::before{content:"[";padding:0 3px 0 2px}
+b.button::after{content:"]";padding:0 2px 0 3px}
+p a>code:hover{color:rgba(0,0,0,.9)}
+#header,#content,#footnotes,#footer{width:100%;margin-left:auto;margin-right:auto;margin-top:0;margin-bottom:0;max-width:62.5em;*zoom:1;position:relative;padding-left:.9375em;padding-right:.9375em}
+#header::before,#header::after,#content::before,#content::after,#footnotes::before,#footnotes::after,#footer::before,#footer::after{content:" ";display:table}
+#header::after,#content::after,#footnotes::after,#footer::after{clear:both}
+#content{margin-top:1.25em}
+#content::before{content:none}
+#header>h1:first-child{color:rgba(0,0,0,.85);margin-top:2.25rem;margin-bottom:0}
+#header>h1:first-child+#toc{margin-top:8px;border-top:1px solid #dddddf}
+#header>h1:only-child,body.toc2 #header>h1:nth-last-child(2){border-bottom:1px solid #dddddf;padding-bottom:8px}
+#header .details{border-bottom:1px solid #dddddf;line-height:1.45;padding-top:.25em;padding-bottom:.25em;padding-left:.25em;color:rgba(0,0,0,.6);display:-ms-flexbox;display:-webkit-flex;display:flex;-ms-flex-flow:row wrap;-webkit-flex-flow:row wrap;flex-flow:row wrap}
+#header .details span:first-child{margin-left:-.125em}
+#header .details span.email a{color:rgba(0,0,0,.85)}
+#header .details br{display:none}
+#header .details br+span::before{content:"\00a0\2013\00a0"}
+#header .details br+span.author::before{content:"\00a0\22c5\00a0";color:rgba(0,0,0,.85)}
+#header .details br+span#revremark::before{content:"\00a0|\00a0"}
+#header #revnumber{text-transform:capitalize}
+#header #revnumber::after{content:"\00a0"}
+#content>h1:first-child:not([class]){color:rgba(0,0,0,.85);border-bottom:1px solid #dddddf;padding-bottom:8px;margin-top:0;padding-top:1rem;margin-bottom:1.25rem}
+#toc{border-bottom:1px solid #e7e7e9;padding-bottom:.5em}
+#toc>ul{margin-left:.125em}
+#toc ul.sectlevel0>li>a{font-style:italic}
+#toc ul.sectlevel0 ul.sectlevel1{margin:.5em 0}
+#toc ul{font-family:"Open Sans","DejaVu Sans",sans-serif;list-style-type:none}
+#toc li{line-height:1.3334;margin-top:.3334em}
+#toc a{text-decoration:none}
+#toc a:active{text-decoration:underline}
+#toctitle{color:#7a2518;font-size:1.2em}
+@media screen and (min-width:768px){#toctitle{font-size:1.375em}
+body.toc2{padding-left:15em;padding-right:0}
+#toc.toc2{margin-top:0!important;background:#f8f8f7;position:fixed;width:15em;left:0;top:0;border-right:1px solid #e7e7e9;border-top-width:0!important;border-bottom-width:0!important;z-index:1000;padding:1.25em 1em;height:100%;overflow:auto}
+#toc.toc2 #toctitle{margin-top:0;margin-bottom:.8rem;font-size:1.2em}
+#toc.toc2>ul{font-size:.9em;margin-bottom:0}
+#toc.toc2 ul ul{margin-left:0;padding-left:1em}
+#toc.toc2 ul.sectlevel0 ul.sectlevel1{padding-left:0;margin-top:.5em;margin-bottom:.5em}
+body.toc2.toc-right{padding-left:0;padding-right:15em}
+body.toc2.toc-right #toc.toc2{border-right-width:0;border-left:1px solid #e7e7e9;left:auto;right:0}}
+@media screen and (min-width:1280px){body.toc2{padding-left:20em;padding-right:0}
+#toc.toc2{width:20em}
+#toc.toc2 #toctitle{font-size:1.375em}
+#toc.toc2>ul{font-size:.95em}
+#toc.toc2 ul ul{padding-left:1.25em}
+body.toc2.toc-right{padding-left:0;padding-right:20em}}
+#content #toc{border-style:solid;border-width:1px;border-color:#e0e0dc;margin-bottom:1.25em;padding:1.25em;background:#f8f8f7;-webkit-border-radius:4px;border-radius:4px}
+#content #toc>:first-child{margin-top:0}
+#content #toc>:last-child{margin-bottom:0}
+#footer{max-width:100%;background:rgba(0,0,0,.8);padding:1.25em}
+#footer-text{color:rgba(255,255,255,.8);line-height:1.44}
+#content{margin-bottom:.625em}
+.sect1{padding-bottom:.625em}
+@media screen and (min-width:768px){#content{margin-bottom:1.25em}
+.sect1{padding-bottom:1.25em}}
+.sect1:last-child{padding-bottom:0}
+.sect1+.sect1{border-top:1px solid #e7e7e9}
+#content h1>a.anchor,h2>a.anchor,h3>a.anchor,#toctitle>a.anchor,.sidebarblock>.content>.title>a.anchor,h4>a.anchor,h5>a.anchor,h6>a.anchor{position:absolute;z-index:1001;width:1.5ex;margin-left:-1.5ex;display:block;text-decoration:none!important;visibility:hidden;text-align:center;font-weight:400}
+#content h1>a.anchor::before,h2>a.anchor::before,h3>a.anchor::before,#toctitle>a.anchor::before,.sidebarblock>.content>.title>a.anchor::before,h4>a.anchor::before,h5>a.anchor::before,h6>a.anchor::before{content:"\00A7";font-size:.85em;display:block;padding-top:.1em}
+#content h1:hover>a.anchor,#content h1>a.anchor:hover,h2:hover>a.anchor,h2>a.anchor:hover,h3:hover>a.anchor,#toctitle:hover>a.anchor,.sidebarblock>.content>.title:hover>a.anchor,h3>a.anchor:hover,#toctitle>a.anchor:hover,.sidebarblock>.content>.title>a.anchor:hover,h4:hover>a.anchor,h4>a.anchor:hover,h5:hover>a.anchor,h5>a.anchor:hover,h6:hover>a.anchor,h6>a.anchor:hover{visibility:visible}
+#content h1>a.link,h2>a.link,h3>a.link,#toctitle>a.link,.sidebarblock>.content>.title>a.link,h4>a.link,h5>a.link,h6>a.link{color:#ba3925;text-decoration:none}
+#content h1>a.link:hover,h2>a.link:hover,h3>a.link:hover,#toctitle>a.link:hover,.sidebarblock>.content>.title>a.link:hover,h4>a.link:hover,h5>a.link:hover,h6>a.link:hover{color:#a53221}
+details,.audioblock,.imageblock,.literalblock,.listingblock,.stemblock,.videoblock{margin-bottom:1.25em}
+details>summary:first-of-type{cursor:pointer;display:list-item;outline:none;margin-bottom:.75em}
+.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{text-rendering:optimizeLegibility;text-align:left;font-family:"Noto Serif","DejaVu Serif",serif;font-size:1rem;font-style:italic}
+table.tableblock.fit-content>caption.title{white-space:nowrap;width:0}
+.paragraph.lead>p,#preamble>.sectionbody>[class="paragraph"]:first-of-type p{font-size:1.21875em;line-height:1.6;color:rgba(0,0,0,.85)}
+table.tableblock #preamble>.sectionbody>[class="paragraph"]:first-of-type p{font-size:inherit}
+.admonitionblock>table{border-collapse:separate;border:0;background:none;width:100%}
+.admonitionblock>table td.icon{text-align:center;width:80px}
+.admonitionblock>table td.icon img{max-width:none}
+.admonitionblock>table td.icon .title{font-weight:bold;font-family:"Open Sans","DejaVu Sans",sans-serif;text-transform:uppercase}
+.admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #dddddf;color:rgba(0,0,0,.6)}
+.admonitionblock>table td.content>:last-child>:last-child{margin-bottom:0}
+.exampleblock>.content{border-style:solid;border-width:1px;border-color:#e6e6e6;margin-bottom:1.25em;padding:1.25em;background:#fff;-webkit-border-radius:4px;border-radius:4px}
+.exampleblock>.content>:first-child{margin-top:0}
+.exampleblock>.content>:last-child{margin-bottom:0}
+.sidebarblock{border-style:solid;border-width:1px;border-color:#dbdbd6;margin-bottom:1.25em;padding:1.25em;background:#f3f3f2;-webkit-border-radius:4px;border-radius:4px}
+.sidebarblock>:first-child{margin-top:0}
+.sidebarblock>:last-child{margin-bottom:0}
+.sidebarblock>.content>.title{color:#7a2518;margin-top:0;text-align:center}
+.exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
+.literalblock pre,.listingblock>.content>pre{-webkit-border-radius:4px;border-radius:4px;word-wrap:break-word;overflow-x:auto;padding:1em;font-size:.8125em}
+@media screen and (min-width:768px){.literalblock pre,.listingblock>.content>pre{font-size:.90625em}}
+@media screen and (min-width:1280px){.literalblock pre,.listingblock>.content>pre{font-size:1em}}
+.literalblock pre,.listingblock>.content>pre:not(.highlight),.listingblock>.content>pre[class="highlight"],.listingblock>.content>pre[class^="highlight "]{background:#f7f7f8}
+.literalblock.output pre{color:#f7f7f8;background:rgba(0,0,0,.9)}
+.listingblock>.content{position:relative}
+.listingblock code[data-lang]::before{display:none;content:attr(data-lang);position:absolute;font-size:.75em;top:.425rem;right:.5rem;line-height:1;text-transform:uppercase;color:inherit;opacity:.5}
+.listingblock:hover code[data-lang]::before{display:block}
+.listingblock.terminal pre .command::before{content:attr(data-prompt);padding-right:.5em;color:inherit;opacity:.5}
+.listingblock.terminal pre .command:not([data-prompt])::before{content:"$"}
+.listingblock pre.highlightjs{padding:0}
+.listingblock pre.highlightjs>code{padding:1em;-webkit-border-radius:4px;border-radius:4px}
+.listingblock pre.prettyprint{border-width:0}
+.prettyprint{background:#f7f7f8}
+pre.prettyprint .linenums{line-height:1.45;margin-left:2em}
+pre.prettyprint li{background:none;list-style-type:inherit;padding-left:0}
+pre.prettyprint li code[data-lang]::before{opacity:1}
+pre.prettyprint li:not(:first-child) code[data-lang]::before{display:none}
+table.linenotable{border-collapse:separate;border:0;margin-bottom:0;background:none}
+table.linenotable td[class]{color:inherit;vertical-align:top;padding:0;line-height:inherit;white-space:normal}
+table.linenotable td.code{padding-left:.75em}
+table.linenotable td.linenos{border-right:1px solid currentColor;opacity:.35;padding-right:.5em}
+pre.pygments .lineno{border-right:1px solid currentColor;opacity:.35;display:inline-block;margin-right:.75em}
+pre.pygments .lineno::before{content:"";margin-right:-.125em}
+.quoteblock{margin:0 1em 1.25em 1.5em;display:table}
+.quoteblock:not(.excerpt)>.title{margin-left:-1.5em;margin-bottom:.75em}
+.quoteblock blockquote,.quoteblock p{color:rgba(0,0,0,.85);font-size:1.15rem;line-height:1.75;word-spacing:.1em;letter-spacing:0;font-style:italic;text-align:justify}
+.quoteblock blockquote{margin:0;padding:0;border:0}
+.quoteblock blockquote::before{content:"\201c";float:left;font-size:2.75em;font-weight:bold;line-height:.6em;margin-left:-.6em;color:#7a2518;text-shadow:0 1px 2px rgba(0,0,0,.1)}
+.quoteblock blockquote>.paragraph:last-child p{margin-bottom:0}
+.quoteblock .attribution{margin-top:.75em;margin-right:.5ex;text-align:right}
+.verseblock{margin:0 1em 1.25em}
+.verseblock pre{font-family:"Open Sans","DejaVu Sans",sans;font-size:1.15rem;color:rgba(0,0,0,.85);font-weight:300;text-rendering:optimizeLegibility}
+.verseblock pre strong{font-weight:400}
+.verseblock .attribution{margin-top:1.25rem;margin-left:.5ex}
+.quoteblock .attribution,.verseblock .attribution{font-size:.9375em;line-height:1.45;font-style:italic}
+.quoteblock .attribution br,.verseblock .attribution br{display:none}
+.quoteblock .attribution cite,.verseblock .attribution cite{display:block;letter-spacing:-.025em;color:rgba(0,0,0,.6)}
+.quoteblock.abstract blockquote::before,.quoteblock.excerpt blockquote::before,.quoteblock .quoteblock blockquote::before{display:none}
+.quoteblock.abstract blockquote,.quoteblock.abstract p,.quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{line-height:1.6;word-spacing:0}
+.quoteblock.abstract{margin:0 1em 1.25em;display:block}
+.quoteblock.abstract>.title{margin:0 0 .375em;font-size:1.15em;text-align:center}
+.quoteblock.excerpt>blockquote,.quoteblock .quoteblock{padding:0 0 .25em 1em;border-left:.25em solid #dddddf}
+.quoteblock.excerpt,.quoteblock .quoteblock{margin-left:0}
+.quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{color:inherit;font-size:1.0625rem}
+.quoteblock.excerpt .attribution,.quoteblock .quoteblock .attribution{color:inherit;text-align:left;margin-right:0}
+table.tableblock{max-width:100%;border-collapse:separate}
+p.tableblock:last-child{margin-bottom:0}
+td.tableblock>.content>:last-child{margin-bottom:-1.25em}
+td.tableblock>.content>:last-child.sidebarblock{margin-bottom:0}
+table.tableblock,th.tableblock,td.tableblock{border:0 solid #dedede}
+table.grid-all>thead>tr>.tableblock,table.grid-all>tbody>tr>.tableblock{border-width:0 1px 1px 0}
+table.grid-all>tfoot>tr>.tableblock{border-width:1px 1px 0 0}
+table.grid-cols>*>tr>.tableblock{border-width:0 1px 0 0}
+table.grid-rows>thead>tr>.tableblock,table.grid-rows>tbody>tr>.tableblock{border-width:0 0 1px}
+table.grid-rows>tfoot>tr>.tableblock{border-width:1px 0 0}
+table.grid-all>*>tr>.tableblock:last-child,table.grid-cols>*>tr>.tableblock:last-child{border-right-width:0}
+table.grid-all>tbody>tr:last-child>.tableblock,table.grid-all>thead:last-child>tr>.tableblock,table.grid-rows>tbody>tr:last-child>.tableblock,table.grid-rows>thead:last-child>tr>.tableblock{border-bottom-width:0}
+table.frame-all{border-width:1px}
+table.frame-sides{border-width:0 1px}
+table.frame-topbot,table.frame-ends{border-width:1px 0}
+table.stripes-all tr,table.stripes-odd tr:nth-of-type(odd),table.stripes-even tr:nth-of-type(even),table.stripes-hover tr:hover{background:#f8f8f7}
+th.halign-left,td.halign-left{text-align:left}
+th.halign-right,td.halign-right{text-align:right}
+th.halign-center,td.halign-center{text-align:center}
+th.valign-top,td.valign-top{vertical-align:top}
+th.valign-bottom,td.valign-bottom{vertical-align:bottom}
+th.valign-middle,td.valign-middle{vertical-align:middle}
+table thead th,table tfoot th{font-weight:bold}
+tbody tr th{display:table-cell;line-height:1.6;background:#f7f8f7}
+tbody tr th,tbody tr th p,tfoot tr th,tfoot tr th p{color:rgba(0,0,0,.8);font-weight:bold}
+p.tableblock>code:only-child{background:none;padding:0}
+p.tableblock{font-size:1em}
+ol{margin-left:1.75em}
+ul li ol{margin-left:1.5em}
+dl dd{margin-left:1.125em}
+dl dd:last-child,dl dd:last-child>:last-child{margin-bottom:0}
+ol>li p,ul>li p,ul dd,ol dd,.olist .olist,.ulist .ulist,.ulist .olist,.olist .ulist{margin-bottom:.625em}
+ul.checklist,ul.none,ol.none,ul.no-bullet,ol.no-bullet,ol.unnumbered,ul.unstyled,ol.unstyled{list-style-type:none}
+ul.no-bullet,ol.no-bullet,ol.unnumbered{margin-left:.625em}
+ul.unstyled,ol.unstyled{margin-left:0}
+ul.checklist{margin-left:.625em}
+ul.checklist li>p:first-child>.fa-square-o:first-child,ul.checklist li>p:first-child>.fa-check-square-o:first-child{width:1.25em;font-size:.8em;position:relative;bottom:.125em}
+ul.checklist li>p:first-child>input[type="checkbox"]:first-child{margin-right:.25em}
+ul.inline{display:-ms-flexbox;display:-webkit-box;display:flex;-ms-flex-flow:row wrap;-webkit-flex-flow:row wrap;flex-flow:row wrap;list-style:none;margin:0 0 .625em -1.25em}
+ul.inline>li{margin-left:1.25em}
+.unstyled dl dt{font-weight:400;font-style:normal}
+ol.arabic{list-style-type:decimal}
+ol.decimal{list-style-type:decimal-leading-zero}
+ol.loweralpha{list-style-type:lower-alpha}
+ol.upperalpha{list-style-type:upper-alpha}
+ol.lowerroman{list-style-type:lower-roman}
+ol.upperroman{list-style-type:upper-roman}
+ol.lowergreek{list-style-type:lower-greek}
+.hdlist>table,.colist>table{border:0;background:none}
+.hdlist>table>tbody>tr,.colist>table>tbody>tr{background:none}
+td.hdlist1,td.hdlist2{vertical-align:top;padding:0 .625em}
+td.hdlist1{font-weight:bold;padding-bottom:1.25em}
+.literalblock+.colist,.listingblock+.colist{margin-top:-.5em}
+.colist td:not([class]):first-child{padding:.4em .75em 0;line-height:1;vertical-align:top}
+.colist td:not([class]):first-child img{max-width:none}
+.colist td:not([class]):last-child{padding:.25em 0}
+.thumb,.th{line-height:0;display:inline-block;border:solid 4px #fff;-webkit-box-shadow:0 0 0 1px #ddd;box-shadow:0 0 0 1px #ddd}
+.imageblock.left{margin:.25em .625em 1.25em 0}
+.imageblock.right{margin:.25em 0 1.25em .625em}
+.imageblock>.title{margin-bottom:0}
+.imageblock.thumb,.imageblock.th{border-width:6px}
+.imageblock.thumb>.title,.imageblock.th>.title{padding:0 .125em}
+.image.left,.image.right{margin-top:.25em;margin-bottom:.25em;display:inline-block;line-height:0}
+.image.left{margin-right:.625em}
+.image.right{margin-left:.625em}
+a.image{text-decoration:none;display:inline-block}
+a.image object{pointer-events:none}
+sup.footnote,sup.footnoteref{font-size:.875em;position:static;vertical-align:super}
+sup.footnote a,sup.footnoteref a{text-decoration:none}
+sup.footnote a:active,sup.footnoteref a:active{text-decoration:underline}
+#footnotes{padding-top:.75em;padding-bottom:.75em;margin-bottom:.625em}
+#footnotes hr{width:20%;min-width:6.25em;margin:-.25em 0 .75em;border-width:1px 0 0}
+#footnotes .footnote{padding:0 .375em 0 .225em;line-height:1.3334;font-size:.875em;margin-left:1.2em;margin-bottom:.2em}
+#footnotes .footnote a:first-of-type{font-weight:bold;text-decoration:none;margin-left:-1.05em}
+#footnotes .footnote:last-of-type{margin-bottom:0}
+#content #footnotes{margin-top:-.625em;margin-bottom:0;padding:.75em 0}
+.gist .file-data>table{border:0;background:#fff;width:100%;margin-bottom:0}
+.gist .file-data>table td.line-data{width:99%}
+div.unbreakable{page-break-inside:avoid}
+.big{font-size:larger}
+.small{font-size:smaller}
+.underline{text-decoration:underline}
+.overline{text-decoration:overline}
+.line-through{text-decoration:line-through}
+.aqua{color:#00bfbf}
+.aqua-background{background:#00fafa}
+.black{color:#000}
+.black-background{background:#000}
+.blue{color:#0000bf}
+.blue-background{background:#0000fa}
+.fuchsia{color:#bf00bf}
+.fuchsia-background{background:#fa00fa}
+.gray{color:#606060}
+.gray-background{background:#7d7d7d}
+.green{color:#006000}
+.green-background{background:#007d00}
+.lime{color:#00bf00}
+.lime-background{background:#00fa00}
+.maroon{color:#600000}
+.maroon-background{background:#7d0000}
+.navy{color:#000060}
+.navy-background{background:#00007d}
+.olive{color:#606000}
+.olive-background{background:#7d7d00}
+.purple{color:#600060}
+.purple-background{background:#7d007d}
+.red{color:#bf0000}
+.red-background{background:#fa0000}
+.silver{color:#909090}
+.silver-background{background:#bcbcbc}
+.teal{color:#006060}
+.teal-background{background:#007d7d}
+.white{color:#bfbfbf}
+.white-background{background:#fafafa}
+.yellow{color:#bfbf00}
+.yellow-background{background:#fafa00}
+span.icon>.fa{cursor:default}
+a span.icon>.fa{cursor:inherit}
+.admonitionblock td.icon [class^="fa icon-"]{font-size:2.5em;text-shadow:1px 1px 2px rgba(0,0,0,.5);cursor:default}
+.admonitionblock td.icon .icon-note::before{content:"\f05a";color:#19407c}
+.admonitionblock td.icon .icon-tip::before{content:"\f0eb";text-shadow:1px 1px 2px rgba(155,155,0,.8);color:#111}
+.admonitionblock td.icon .icon-warning::before{content:"\f071";color:#bf6900}
+.admonitionblock td.icon .icon-caution::before{content:"\f06d";color:#bf3400}
+.admonitionblock td.icon .icon-important::before{content:"\f06a";color:#bf0000}
+.conum[data-value]{display:inline-block;color:#fff!important;background:rgba(0,0,0,.8);-webkit-border-radius:100px;border-radius:100px;text-align:center;font-size:.75em;width:1.67em;height:1.67em;line-height:1.67em;font-family:"Open Sans","DejaVu Sans",sans-serif;font-style:normal;font-weight:bold}
+.conum[data-value] *{color:#fff!important}
+.conum[data-value]+b{display:none}
+.conum[data-value]::after{content:attr(data-value)}
+pre .conum[data-value]{position:relative;top:-.125em}
+b.conum *{color:inherit!important}
+.conum:not([data-value]):empty{display:none}
+dt,th.tableblock,td.content,div.footnote{text-rendering:optimizeLegibility}
+h1,h2,p,td.content,span.alt{letter-spacing:-.01em}
+p strong,td.content strong,div.footnote strong{letter-spacing:-.005em}
+p,blockquote,dt,td.content,span.alt{font-size:1.0625rem}
+p{margin-bottom:1.25rem}
+.sidebarblock p,.sidebarblock dt,.sidebarblock td.content,p.tableblock{font-size:1em}
+.exampleblock>.content{background:#fffef7;border-color:#e0e0dc;-webkit-box-shadow:0 1px 4px #e0e0dc;box-shadow:0 1px 4px #e0e0dc}
+.print-only{display:none!important}
+@page{margin:1.25cm .75cm}
+@media print{*{-webkit-box-shadow:none!important;box-shadow:none!important;text-shadow:none!important}
+html{font-size:80%}
+a{color:inherit!important;text-decoration:underline!important}
+a.bare,a[href^="#"],a[href^="mailto:"]{text-decoration:none!important}
+a[href^="http:"]:not(.bare)::after,a[href^="https:"]:not(.bare)::after{content:"(" attr(href) ")";display:inline-block;font-size:.875em;padding-left:.25em}
+abbr[title]::after{content:" (" attr(title) ")"}
+pre,blockquote,tr,img,object,svg{page-break-inside:avoid}
+thead{display:table-header-group}
+svg{max-width:100%}
+p,blockquote,dt,td.content{font-size:1em;orphans:3;widows:3}
+h2,h3,#toctitle,.sidebarblock>.content>.title{page-break-after:avoid}
+#toc,.sidebarblock,.exampleblock>.content{background:none!important}
+#toc{border-bottom:1px solid #dddddf!important;padding-bottom:0!important}
+body.book #header{text-align:center}
+body.book #header>h1:first-child{border:0!important;margin:2.5em 0 1em}
+body.book #header .details{border:0!important;display:block;padding:0!important}
+body.book #header .details span:first-child{margin-left:0!important}
+body.book #header .details br{display:block}
+body.book #header .details br+span::before{content:none!important}
+body.book #toc{border:0!important;text-align:left!important;padding:0!important;margin:0!important}
+body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-break-before:always}
+.listingblock code[data-lang]::before{display:block}
+#footer{padding:0 .9375em}
+.hide-on-print{display:none!important}
+.print-only{display:block!important}
+.hide-for-print{display:none!important}
+.show-for-print{display:inherit!important}}
+@media print,amzn-kf8{#header>h1:first-child{margin-top:1.25rem}
+.sect1{padding:0!important}
+.sect1+.sect1{border:0}
+#footer{background:none}
+#footer-text{color:rgba(0,0,0,.6);font-size:.9em}}
+@media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
+</style>
+</head>
+<body class="article">
+<div id="header">
+<h1>EYLAH - User Guide</h1>
+</div>
+<div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-19">
+<p>By: <code>AY1920S2-CS2103T-W13-1</code>      Since: <code>Feb 2020</code></p>
+</div>
+</div>
+<div id="toc" class="toc">
+<div id="toctitle"></div>
+<ul class="sectlevel1">
+<li><a href="#intro">1. Introduction</a>
+<ul class="sectlevel2">
+<li><a href="#_purpose">1.1. Purpose</a></li>
+<li><a href="#_tips_on_reading_the_user_guide">1.2. Tips on reading the User Guide</a></li>
+</ul>
+</li>
+<li><a href="#getting-started">2. Getting Started</a></li>
+<li><a href="#Features">3. Features</a>
+<ul class="sectlevel2">
+<li><a href="#help">3.1. Display the available commands : <code>help</code></a></li>
+<li><a href="#_diet_tracker_diet">3.2. Diet Tracker : <code>diet</code></a>
+<ul class="sectlevel3">
+<li><a href="#mode">3.2.1. Dieting Mode <code>mode</code></a></li>
+<li><a href="#height">3.2.2. Storing Height <code>height</code></a></li>
+<li><a href="#weight">3.2.3. Storing Weight <code>weight</code></a></li>
+<li><a href="#metrics">3.2.4. Showing your Metrics <code>metrics</code></a></li>
+<li><a href="#calculatebmi">3.2.5. Calculating Body Mass Index (BMI) <code>bmi</code></a></li>
+<li><a href="#addfood">3.2.6. Adding food <code>add</code></a></li>
+<li><a href="#listfooditem">3.2.7. Listing items <code>list</code></a></li>
+<li><a href="#deletefooditem">3.2.8. Deleting a Food Item <code>delete</code></a></li>
+<li><a href="#editfooditem">3.2.9. Editing a Food Item <code>edit</code></a></li>
+<li><a href="#dietback">3.2.10. Exiting Diet Tracker to go back to main menu <code>back</code></a></li>
+</ul>
+</li>
+<li><a href="#_expense_splitter_split">3.3. Expense Splitter : <code>split</code></a>
+<ul class="sectlevel3">
+<li><a href="#additem">3.3.1. Adding an item: <code>additem</code></a></li>
+<li><a href="#deleteitem">3.3.2. Deleting an item: <code>deleteitem</code></a></li>
+<li><a href="#listreceipt">3.3.3. Listing the current receipt: <code>listreceipt</code></a></li>
+<li><a href="#listamount">3.3.4. Listing amounts owed by each person: <code>listamount</code></a></li>
+<li><a href="#donereceipt">3.3.5. Mark receipt as done <code>donereceipt</code></a></li>
+<li><a href="#paid">3.3.6. Paying money: <code>paid</code></a></li>
+<li><a href="#clearreceipt">3.3.7. Clears the receipt <code>clearreceipt</code></a></li>
+<li><a href="#splitback">3.3.8. Exiting Expense Splitter to go back to main menu <code>back</code></a></li>
+</ul>
+</li>
+<li><a href="#exit">3.4. Exiting the Application : <code>exit</code></a></li>
+<li><a href="#_saving_the_data">3.5. Saving the data</a></li>
+</ul>
+</li>
+<li><a href="#faq">4. FAQ</a></li>
+<li><a href="#command-summary">5. Command Summary</a>
+<ul class="sectlevel2">
+<li><a href="#_for_diet_tracker">5.1. For Diet Tracker</a></li>
+<li><a href="#_for_expense_splitter">5.2. For Expense Splitter</a></li>
+</ul>
+</li>
+<li><a href="#glossary">6. Glossary</a></li>
+<li><a href="#AppendixA">7. Appendix: Simple activity diagram to aid you with using Expense Splitter<br></a></li>
+</ul>
+</div>
+</div>
+<div class="sect1 has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-22">
+<h2 id="intro">1. Introduction</h2>
+<div class="sectionbody">
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-25">
+<p>Greetings! Welcome to EYLAH&#8217;s User Guide.</p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-27">
+<p>This user guide provides in-depth guide for you to aid you in using the
+EYLAH desktop application. This guide comprises of 7 main portions,
+the <a href="#intro">introduction</a>, <a href="#getting-started">getting started</a>, <a href="#Features">features</a>, <a href="#faq">FAQ</a>,
+<a href="#command-summary">command summary</a>, <a href="#glossary">glossary</a> and <a href="#AppendixA">appendix</a>.</p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-32">
+<p>Are you someone who <strong>lives in Temasek Hall</strong> in the National University of Singapore (NUS) and
+has <strong>supper frequently with your hall mates?</strong> Do experience <strong>splitting headaches when splitting large bills amongst
+a large group of friends</strong>? Have you ever wished for a <strong>quick and easy way to manage your calorie intake</strong>?
+Or wished for a <strong>Command Line Interface</strong> (CLI) application that can solve the above mentioned issues?</p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-37">
+<p>If you answered <strong>"YES!"</strong> to any of the above questions, Ease Your Life At Halls (EYLAH) is a revolutionary new
+super-application that developed just for you that will make your lives at halls much easier!</p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-40">
+<p>EYLAH is an Expense Splitter and Diet Tracker rolled into one, for Temasek Hall residents who <strong>prefer to use a desktop
+app to solve issues.</strong> More importantly, EYLAH is optimized for residents who prefer to work with a <strong>Command Line
+Interface</strong> (CLI).</p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-44">
+<p>EYLAH can solve your problems in halls by <strong>tracking your diet</strong> after those unhealthy suppers
+and <strong>splitting the cost</strong> after each outing or late-night party session with a few keystrokes of your keyboard.
+Interested? Jump to <a href="#getting-started">Section 2, &#8220;Getting Started&#8221;</a> to get started. Let&#8217;s go!</p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-48">
+<p>Hope you have a pleasant experience using EYLAH!</p>
+</div>
+<div class="imageblock has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-51">
+<div class="content">
+<img src="images/Ui.png" alt="Ui" width="890">
+</div>
+<div class="title">Figure 1. Launch screen of EYLAH</div>
+</div>
+<div class="sect2 has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-54">
+<h3 id="_purpose">1.1. Purpose</h3>
+<div class="ulist has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-55">
+<ul>
+<li class="has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-55">
+<p>This documentation serves as an introduction to the features and proper usage of EYLAH, and is made to aid you
+in using the application to improve your lives in Temasek Hall.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2 has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-59">
+<h3 id="_tips_on_reading_the_user_guide">1.2. Tips on reading the User Guide</h3>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-60">
+<p>We encourage you to read EYLAH&#8217;s User Guide from top to bottom.</p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-62">
+<p>While reading the User Guide you may encounter some symbols.
+These symbols are used to highlight crucial information or tips and in this portion we will be explaining the symbols
+and what they stand for.</p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-66">
+<p>These symbols include:</p>
+</div>
+<div class="admonitionblock note has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-69">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-70">
+<p>This block of text with a blue exclamation mark indicates <strong>additional notes</strong> and <strong>information</strong> that you should
+consider to prevent unexpected behaviour you are using EYLAH.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-75">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-76">
+<p>This block of text with a yellow light bulb indicates <strong>additional tips</strong> that will help you when using EYLAH.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock warning has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-80">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Warning</div>
+</td>
+<td class="content">
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-81">
+<p>This block of text with a warning sign indicates warnings, information you should take extreme note of.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-84">
+<p><kbd>Enter</kbd> - This symbol indicates the enter button on the keyboard.</p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-86">
+<p><code>markup</code> - A grey highlight (known as a mark-up) indicates a command that can be inputted into EYLAH.<br></p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-88">
+<p><code>[-c Calories]</code> - For some commands there are optional fields. Keywords placed in square brackets are optional fields.<br>
+(e.g: <code>edit INDEX [-n NAME] [-c CALORIES]</code> )</p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-91">
+<p>Lastly, blue underline words like <a href="">this</a> will lead you to other portions of the User Guide or to an external
+website.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1 has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-95">
+<h2 id="getting-started">2. Getting Started</h2>
+<div class="sectionbody">
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-97">
+<p>Need help setting up EYLAH? Simply follow the steps below to get started in no time!</p>
+</div>
+<div class="olist arabic has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-99">
+<ol class="arabic">
+<li class="has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-99">
+<p>Ensure you have <code>Java 11</code> or above installed in your Computer.</p>
+</li>
+<li class="has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-100">
+<p>Download the latest <code>CS2103-W13-1.EYLAH.jar</code> <a href="https://github.com/AY1920S2-CS2103T-W13-1/main/releases">here</a>.</p>
+</li>
+<li class="has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-101">
+<p>Copy the file to the folder you want to use as the home folder for EYLAH.</p>
+</li>
+<li class="has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-102">
+<p>Navigate to the folder using terminal and to run the jar file type <code>java -jar CS2103-W13-1.EYLAH.jar</code> to start
+EYLAH.</p>
+</li>
+<li class="has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-104">
+<p>You should see an image similar to Figure 1 above.
+Type your command in the space below Enter command and press <kbd>Enter</kbd> to execute it.<br>
+e.g. typing <strong><code>help</code></strong> and pressing <kbd>Enter</kbd> will show you the commands you can type.</p>
+</li>
+<li class="has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-107">
+<p>Some example commands you can try:</p>
+<div class="ulist has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-109">
+<ul>
+<li class="has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-109">
+<p><code>1</code> or <code>diet</code> : enters the Diet Tracker component of EYLAH.</p>
+</li>
+<li class="has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-110">
+<p><code>2</code> or <code>split</code> : enters the Expense Splitter component of EYLAH.</p>
+</li>
+<li class="has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-111">
+<p><code>help</code> : shows the list of commands you can execute at each page.</p>
+</li>
+<li class="has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-112">
+<p><code>exit</code> : exits the app</p>
+</li>
+</ul>
+</div>
+</li>
+<li class="has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-114">
+<p>Refer to <a href="#Features">Section 3, &#8220;Features&#8221;</a> for details of each command.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1 has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-117">
+<h2 id="Features">3. Features</h2>
+<div class="sectionbody">
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-119">
+<p>In this section, you can find <strong>all</strong> the commands of EYLA together with
+some tips and tricks you can use to improve your user
+experience while using EYLAH.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-127">
+<caption class="title">Table 1. This table shows you a summary of commands in EYLAH.</caption>
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Diet Tracker</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Expense Splitter</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#mode">mode</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#additem">additem</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#height">height</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#deleteitem">deleteitem</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#weight">weight</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#listreceipt">listreceipt</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#metrics">metrics</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#listamount">listamount</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#calculatebmi">bmi</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#donereceipt">donereceipt</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#addfood">add</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#paid">paid</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#listfooditem">list</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#clearreceipt">clearreceipt</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#deletefooditem">delete</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#help">help</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#editfooditem">edit</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#dietback">back</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#help">help</a></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#splitback">back</a></p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<div class="exampleblock has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-164">
+<div class="content">
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-165">
+<p><strong>Command Format</strong><br>
+preface..</p>
+</div>
+<div class="ulist has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-168">
+<ul>
+<li class="has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-168">
+<p>Words in <code>UPPER_CASE</code> are the parameters supplied by you.<br>
+e.g: in <code>additem -i ITEMNAME -p ITEMPRICE -n NAME</code>.<br>
+<code>ITEMNAME</code>, <code>ITEMPRICE</code> and <code>NAME</code> are parameters which can decided by you,</p>
+</li>
+<li class="has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-172">
+<p>Items in square brackets are optional.<br>
+ e.g: <code>paid INDEX [AMOUNT]</code> can be used as <code>paid 1</code> or as
+<code>paid 1 3.90</code>.</p>
+</li>
+<li class="has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-176">
+<p>Parameters with <code>…</code>​ after them can be used multiple times including zero times.<br>
+e.g: <code>[-n NAME]&#8230;&#8203;</code> can be used as
+<code>-n Charlotte</code>, <code>-n Alice</code> <code>-n Bob</code> or you can leave it empty.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2 has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-183">
+<h3 id="help">3.1. Display the available commands : <code>help</code></h3>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-185">
+<p>In this section, you will learn more about <code>help</code> command, <a href="#howtousehelpcommand">how to use it</a>
+and the <a href="#helpexpectedoutcome">expected outcome</a> after using the <code>help</code> command.</p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-188">
+<p><strong>Summary of Help Command:</strong><br>
+<code>help</code> You can use the <code>help</code> command, if you are uncertain, to see the list of available commands.
+This command can be used everywhere in the application.</p>
+</div>
+<div id="howtousehelpcommand" class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-193">
+<p><strong>How to use the Help Command:</strong></p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-195">
+<p>Format:<br>
+<code>help</code><br></p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-198">
+<p>Valid Example:<br>
+<code>help</code></p>
+</div>
+<div id="helpexpectedoutcome" class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-202">
+<p><strong>Expected outcome:</strong></p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-204">
+<p><strong>Main Menu:</strong></p>
+</div>
+<div class="imageblock has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-207">
+<div class="content">
+<img src="images/main_help.png" alt="main help" width="890" height="300">
+</div>
+<div class="title">Figure 2. Main Menu Help</div>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-209">
+<p><strong>Diet Tracker Mode:</strong></p>
+</div>
+<div class="imageblock has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-212">
+<div class="content">
+<img src="images/diethelp.png" alt="diethelp" width="890" height="300">
+</div>
+<div class="title">Figure 3. Diet Tracker Help</div>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-214">
+<p><strong>Expense Splitter Mode:</strong></p>
+</div>
+<div class="imageblock has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-217">
+<div class="content">
+<img src="images/splithelp.png" alt="splithelp" width="890">
+</div>
+<div class="title">Figure 4. Expense Splitter Help</div>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-219">
+<p><strong>Additional notes and tips</strong><br></p>
+</div>
+<div class="admonitionblock note has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-222">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-223">
+<p>Help in main menu and different mode will give different help information.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect2 has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-231">
+<h3 id="_diet_tracker_diet">3.2. Diet Tracker : <code>diet</code></h3>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-233">
+<p>Using a Dieting App has never been easier! You can easily achieve the functionalities of a standard Dieting App with Diet Tracker.</p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-235">
+<p>Diet Tracker will help you achieve your ideal weight and body mass!</p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-237">
+<p>You can store all your food intake everyday and calculate useful information.</p>
+</div>
+<hr>
+<div class="sect3 has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-244">
+<h4 id="mode">3.2.1. Dieting Mode <code>mode</code></h4>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-246">
+<p>In this section, you will learn more about the <code>mode</code> command, <a href="#howtousemodecommand">how to use it</a>
+and the <a href="#modeexpectedoutcome">expected outcome</a> after using the
+<code>mode</code> command.</p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-250">
+<p><strong>Summary of Mode Command:</strong><br>
+<code>mode</code> You can set your desired dieting goal with the different modes that set a limit on your daily
+calorie intake. The calorie limits are calculated based on that of an average human. Your daily calories intake status
+can be monitored with the <code>list</code> command.</p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-255">
+<p>Switch the dieting mode, based on the following modes:<br></p>
+</div>
+<div class="ulist has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-257">
+<ul>
+<li class="has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-257">
+<p>Lose Weight (-l) (2000 calorie limit)</p>
+</li>
+<li class="has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-258">
+<p>Gain Weight (-g) (3000 calorie limit)</p>
+</li>
+<li class="has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-259">
+<p>Maintain (-m) (2500 calorie limit)</p>
+</li>
+</ul>
+</div>
+<div id="howtousemodecommand" class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-262">
+<p><strong>How to use the Mode Command:</strong></p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-264">
+<p>Format:<br>
+<code>mode [-l] [-g] [-m]</code><br></p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-267">
+<p>Valid Example:<br>
+<code>mode -l</code></p>
+</div>
+<div class="admonitionblock warning has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-271">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Warning</div>
+</td>
+<td class="content">
+You must only input <strong>EXACTLY ONE</strong> mode per mode command.
+</td>
+</tr>
+</table>
+</div>
+<div id="modeexpectedoutcome" class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-274">
+<p><strong>Expected outcome:</strong></p>
+</div>
+<div class="imageblock has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-277">
+<div class="content">
+<img src="images/dietTrackerModeCommandSuccessPhoto.png" alt="dietTrackerModeCommandSuccessPhoto" width="890">
+</div>
+<div class="title">Figure 5. Diet Tracker Mode Command</div>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-279">
+<p><strong>Additional notes and tips</strong><br></p>
+</div>
+<div class="admonitionblock note has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-282">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-283">
+<p>The default mode is MAINTAIN if you have not set your mode.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-287">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">
+<div class="ulist has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-288">
+<ul>
+<li class="has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-288">
+<p>Switch your Dieting Mode to help yourself reach your diet targets better!</p>
+</li>
+<li class="has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-289">
+<p>Check your currently chosen Dieting Mode with <code>metrics</code>.</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3 has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-297">
+<h4 id="height">3.2.2. Storing Height <code>height</code></h4>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-299">
+<p>In this section, you will learn more about the <code>height</code> command, <a href="#howtouseheightcommand">how to use it</a>
+and the <a href="#heightexpectedoutcome">expected outcome</a> after using the
+<code>height</code> command.</p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-303">
+<p><strong>Summary of Height Command:</strong><br>
+<code>height</code> You can use this command to save your Height to the Diet Tracker.</p>
+</div>
+<div id="howtouseheightcommand" class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-307">
+<p><strong>How to use the Height Command:</strong></p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-309">
+<p>Format:<br>
+<code>height HEIGHT</code><br></p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-312">
+<p>Valid Example:<br>
+<code>height 170.2</code></p>
+</div>
+<div id="heightexpectedoutcome" class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-316">
+<p><strong>Expected outcome:</strong></p>
+</div>
+<div class="imageblock has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-319">
+<div class="content">
+<img src="images/dietTrackerHeightCommandSuccessPhoto.png" alt="dietTrackerHeightCommandSuccessPhoto" width="890">
+</div>
+<div class="title">Figure 6. Diet Tracker Height Command</div>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-321">
+<p><strong>Additional notes and tips</strong><br></p>
+</div>
+<div class="admonitionblock note has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-324">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-325">
+<p>Height in centimetres (cm). Decimal places are accepted. I.e. <code>height 172.305</code> is accepted.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-329">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-330">
+<p>Check your stored height with <code>metrics</code>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3 has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-337">
+<h4 id="weight">3.2.3. Storing Weight <code>weight</code></h4>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-339">
+<p>In this section, you will learn more about the <code>weight</code> command, <a href="#howtouseweightcommand">how to use it</a>
+and the <a href="#weightexpectedoutcome">expected outcome</a> after using the
+<code>weight</code> command.</p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-343">
+<p><strong>Summary of Weight Command:</strong><br>
+<code>weight</code> You can use this command to save your Weight to the Diet Tracker.</p>
+</div>
+<div id="howtouseweightcommand" class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-347">
+<p><strong>How to use the Weight Command:</strong></p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-349">
+<p>Format:<br>
+<code>weight WEIGHT</code><br></p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-352">
+<p>Valid Example:<br>
+<code>weight 65.7</code></p>
+</div>
+<div id="weightexpectedoutcome" class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-356">
+<p><strong>Expected outcome:</strong></p>
+</div>
+<div class="imageblock has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-359">
+<div class="content">
+<img src="images/dietTrackerWeightCommandSuccessPhoto.png" alt="dietTrackerWeightCommandSuccessPhoto" width="890">
+</div>
+<div class="title">Figure 7. Diet Tracker Weight Command</div>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-361">
+<p><strong>Additional notes and tips</strong><br></p>
+</div>
+<div class="admonitionblock note has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-364">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-365">
+<p>Weight in kilograms (kg). Decimal places are accepted. I.e. <code>weight 65.77</code> is accepted.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-369">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-370">
+<p>Check your stored weight with <code>metrics</code>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3 has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-378">
+<h4 id="metrics">3.2.4. Showing your Metrics <code>metrics</code></h4>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-380">
+<p>In this section, you will learn more about the <code>metrics</code> command, <a href="#howtousemetricscommand">how to use it</a>
+and the <a href="#metricsexpectedoutcome">expected outcome</a> after using the
+<code>metrics</code> command.</p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-384">
+<p><strong>Summary of Metrics Command:</strong><br>
+<code>metrics</code> You can print out your individual metrics (Height, Weight and Mode) to check them.</p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-387">
+<p>It will display the following data:<br></p>
+</div>
+<div class="ulist has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-389">
+<ul>
+<li class="has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-389">
+<p>Your height</p>
+</li>
+<li class="has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-390">
+<p>Your weight</p>
+</li>
+<li class="has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-391">
+<p>Your chosen Dieting Mode</p>
+</li>
+</ul>
+</div>
+<div id="howtousemetricscommand" class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-394">
+<p><strong>How to use the Metrics Command:</strong></p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-396">
+<p>Format:<br>
+<code>metrics</code><br></p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-399">
+<p>Valid Example:<br>
+<code>metrics</code></p>
+</div>
+<div id="metricsexpectedoutcome" class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-403">
+<p><strong>Expected outcome:</strong></p>
+</div>
+<div class="imageblock has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-406">
+<div class="content">
+<img src="images/dietTrackerMetricsCommandSuccessPhoto.png" alt="dietTrackerMetricsCommandSuccessPhoto" width="890">
+</div>
+<div class="title">Figure 8. Diet Tracker Metrics Command</div>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-408">
+<p><strong>Additional notes and tips</strong><br></p>
+</div>
+<div class="admonitionblock note has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-411">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-412">
+<p>Diet Tracker will prompt you if you did not have any previously stored Height, Weight.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-416">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-417">
+<p>Use this to check whether you have previously stored a Height, a Weight, or have chosen your Dieting Mode already.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3 has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-425">
+<h4 id="calculatebmi">3.2.5. Calculating Body Mass Index (BMI) <code>bmi</code></h4>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-427">
+<p>In this section, you will learn more about the <code>bmi</code> command, <a href="#howtousebmicommand">how to use it</a>
+and the <a href="#bmiexpectedoutcome">expected outcome</a> after using the
+<code>bmi</code> command.</p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-431">
+<p><strong>Summary of Bmi Command:</strong><br>
+<code>bmi</code> You can calculate your BMI either through an input height and weight or your previously stored Height and Weight.<br></p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-434">
+<p>It will display the following data:<br></p>
+</div>
+<div class="ulist has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-436">
+<ul>
+<li class="has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-436">
+<p>BMI value</p>
+</li>
+</ul>
+</div>
+<div id="howtousebmicommand" class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-439">
+<p><strong>How to use the Bmi Command:</strong></p>
+</div>
+<div class="sidebarblock has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-441">
+<div class="content">
+<div class="ulist has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-442">
+<ul>
+<li class="has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-442">
+<p>There are 3 ways to use <code>bmi</code>.</p>
+</li>
+<li class="has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-443">
+<p>The first is if there is no input height and weight. This will use
+the height and weight that is stored in the Self object.</p>
+</li>
+<li class="has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-445">
+<p>The second is if there is either no input height or input weight. This will use the
+stored Height (in the case of missing input height) or stored Weight (in the case of missing input weight)
+to do the calculation instead.</p>
+</li>
+<li class="has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-448">
+<p>The third is to calculate bmi with an input height and weight.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-451">
+<p>Format:<br>
+<code>bmi [-h HEIGHT] [-w WEIGHT]</code><br></p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-454">
+<p>Valid Examples:</p>
+</div>
+<div class="ulist has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-456">
+<ul>
+<li class="has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-456">
+<p><code>height 172</code><br>
+<code>weight 65</code><br>
+<code>bmi</code><br>
+Change your height and your weight to your current measurements before calculating your BMI.
+BMI is calculated based off the stored height and weight in this instance.</p>
+</li>
+<li class="has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-461">
+<p><code>height 173.5</code><br>
+<code>bmi -w 59.9</code><br>
+Change your height to your current measurements before calculating you BMI.
+BMI is calculated based off the stored height and input weight in this instance.</p>
+</li>
+<li class="has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-465">
+<p><code>bmi -h 172 -w 65.5</code><br>
+Calculate BMI based on the input height and weight values.</p>
+</li>
+</ul>
+</div>
+<div id="bmiexpectedoutcome" class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-469">
+<p><strong>Expected outcome:</strong></p>
+</div>
+<div class="imageblock has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-472">
+<div class="content">
+<img src="images/dietTrackerBmiCommandSuccessPhoto.png" alt="dietTrackerBmiCommandSuccessPhoto" width="890">
+</div>
+<div class="title">Figure 9. Diet Tracker Bmi Command</div>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-474">
+<p><strong>Additional tips</strong><br></p>
+</div>
+<div class="admonitionblock tip has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-477">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-478">
+<p>If you are unsure whether you have already input your height and weight, you may <code>metrics</code> to check.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3 has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-486">
+<h4 id="addfood">3.2.6. Adding food <code>add</code></h4>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-488">
+<p>In this section, you will learn more about the <code>add</code> command, <a href="#howtouseaddcommand">how to use it</a>
+and the <a href="#addexpectedoutcome">expected outcome</a> after using the
+<code>add</code> command.</p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-492">
+<p><strong>Summary of Add Command:</strong><br>
+<code>add</code> You can use this command to add a food to the list.</p>
+</div>
+<div id="howtouseaddcommand" class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-496">
+<p><strong>How to use the Add Command:</strong></p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-498">
+<p>Format:<br>
+<code>add -n NAME -c CALORIES [-t TAG]&#8230;&#8203;</code><br></p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-501">
+<p>Valid Example:<br>
+<code>add -n Fishball Noodles -c 383 -t favourite -t noodles</code></p>
+</div>
+<div id="addexpectedoutcome" class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-505">
+<p><strong>Expected outcome:</strong></p>
+</div>
+<div class="imageblock has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-508">
+<div class="content">
+<img src="images/dietTrackerAddCommandSuccessPhoto.png" alt="dietTrackerAddCommandSuccessPhoto" width="890">
+</div>
+<div class="title">Figure 10. Diet Tracker Add Command</div>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-510">
+<p><strong>Additional notes</strong><br></p>
+</div>
+<div class="admonitionblock note has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-513">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="ulist has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-514">
+<ul>
+<li class="has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-514">
+<p>Name and Calories are compulsory.</p>
+</li>
+<li class="has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-515">
+<p>Tags are optional.</p>
+</li>
+<li class="has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-516">
+<p>Any food that you add will be added based on the time that you keyed in the food data. As of Diet Tracker&#8217;s current functionalities, you cannot add in foods that you have consumed the day before while also setting that food to appear for the previous day&#8217;s data.</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3 has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-524">
+<h4 id="listfooditem">3.2.7. Listing items <code>list</code></h4>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-526">
+<p>In this section, you will learn more about the <code>list</code> command, <a href="#howtouselistcommand">how to use it</a>
+and the <a href="#listexpectedoutcome">expected outcome</a> after using the
+<code>list</code> command.</p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-530">
+<p><strong>Summary of List Command:</strong><br>
+<code>list</code> You can use this function to list out the different foods that you have consumed and their total calories.
+Different listing modes allow you to watch your overall diet during the period, or how much you can/should eat based
+on your daily intake.</p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-535">
+<p>Displays different data based on the below flags:</p>
+</div>
+<div class="ulist has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-537">
+<ul>
+<li class="has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-537">
+<p>Food consumed for the day (NO FLAG)</p>
+</li>
+<li class="has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-538">
+<p>All food ever consumed (-a)</p>
+</li>
+<li class="has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-539">
+<p>Food consumed for the past number of days (-d)</p>
+</li>
+<li class="has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-540">
+<p>All food with the given tag (-t)</p>
+</li>
+</ul>
+</div>
+<div id="howtouselistcommand" class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-544">
+<p><strong>How to use the List Command:</strong></p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-546">
+<p>Format:<br>
+<code>list [-a] [-d NUMDAYS] [-t TAGNAME]</code><br></p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-549">
+<p>Valid Examples:<br>
+<code>list</code><br>
+<code>list -a</code><br>
+<code>list -d 3</code><br>
+<code>list -t healthy</code></p>
+</div>
+<div id="listexpectedoutcome" class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-556">
+<p><strong>Expected outcome:</strong></p>
+</div>
+<div class="imageblock has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-559">
+<div class="content">
+<img src="images/dietTrackerListCommandSuccessPhoto.png" alt="dietTrackerListCommandSuccessPhoto" width="890">
+</div>
+<div class="title">Figure 11. Diet Tracker List Command</div>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-561">
+<p><strong>Additional notes</strong><br></p>
+</div>
+<div class="admonitionblock note has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-564">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="ulist has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-565">
+<ul>
+<li class="has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-565">
+<p>Default value of list is food consumed for the day.</p>
+</li>
+<li class="has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-566">
+<p>For the <code>-d</code> tag, the amount of days specified must be a positive Integer value.</p>
+</li>
+<li class="has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-567">
+<p>Calorie intake based on mode is only shown when listing food for the day.</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3 has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-575">
+<h4 id="deletefooditem">3.2.8. Deleting a Food Item <code>delete</code></h4>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-577">
+<p>In this section, you will learn more about the <code>delete</code> command, <a href="#howtousedeletecommand">how to use it</a>
+and the <a href="#deleteexpectedoutcome">expected outcome</a> after using the
+<code>delete</code> command.</p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-581">
+<p><strong>Summary of Delete Command:</strong><br>
+<code>delete</code> You can delete a food item based on the previous list of Foods that you have listed.<br></p>
+</div>
+<div id="howtousedeletecommand" class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-585">
+<p><strong>How to use the Delete Command:</strong></p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-587">
+<p>Format:<br>
+<code>delete INDEX</code><br></p>
+</div>
+<div class="sidebarblock has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-590">
+<div class="content">
+<div class="ulist has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-591">
+<ul>
+<li class="has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-591">
+<p>Deletes the food item at the specified <code>INDEX</code> of the list.</p>
+</li>
+<li class="has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-592">
+<p>The index refers to the index number shown in the displayed food list.</p>
+</li>
+<li class="has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-593">
+<p>The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-596">
+<p>Valid Example:<br>
+<code>list</code><br>
+<code>delete 2</code><br>
+Deletes the 2nd row of food data from today&#8217;s list of food.</p>
+</div>
+<div class="admonitionblock warning has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-601">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Warning</div>
+</td>
+<td class="content">
+You <strong>MUST</strong> use <code>list</code> to check the list of items to identify a target to edit. This would ensure that you get the
+correct index of the item.
+</td>
+</tr>
+</table>
+</div>
+<div id="deleteexpectedoutcome" class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-605">
+<p><strong>Expected outcome:</strong></p>
+</div>
+<div class="imageblock has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-608">
+<div class="content">
+<img src="images/dietTrackerDeleteCommandSuccessPhoto.png" alt="dietTrackerDeleteCommandSuccessPhoto" width="890">
+</div>
+<div class="title">Figure 12. Diet Tracker Delete Command</div>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-610">
+<p><strong>Additional notes and tips</strong><br></p>
+</div>
+<div class="admonitionblock tip has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-613">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-614">
+<p>You can list based on time period or tags to find the item that you want to delete.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3 has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-622">
+<h4 id="editfooditem">3.2.9. Editing a Food Item <code>edit</code></h4>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-624">
+<p>In this section, you will learn more about the <code>edit</code> command, <a href="#howtouseeditcommand">how to use it</a>
+and the <a href="#editexpectedoutcome">expected outcome</a> after using the
+<code>edit</code> command.</p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-628">
+<p><strong>Summary of Edit Command:</strong><br>
+<code>edit</code> You can edit either the Food name, or the calories of the food at the specified index. <br></p>
+</div>
+<div id="howtouseeditcommand" class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-632">
+<p><strong>How to use the Edit Command:</strong></p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-634">
+<p>Format:<br>
+<code>edit -i INDEX [-n NAME] [-c CALORIES]</code><br></p>
+</div>
+<div class="sidebarblock has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-637">
+<div class="content">
+<div class="ulist has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-638">
+<ul>
+<li class="has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-638">
+<p>Edits the Food Item at the specified <code>INDEX</code>.
+The index refers to the index number shown in the displayed Food list.
+The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
+</li>
+<li class="has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-641">
+<p>At least one of the optional fields must be provided.</p>
+</li>
+<li class="has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-642">
+<p>Existing values will be updated to the input values.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-645">
+<p>Valid Example:<br>
+<code>edit -i 2 -n Chicken Rice -c 585</code><br>
+Edits the name of the food item at index 2 to be 'Chicken Rice' and the calories to be '585'.</p>
+</div>
+<div class="admonitionblock warning has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-650">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Warning</div>
+</td>
+<td class="content">
+You <strong>MUST</strong> use <code>list</code> to check the list of items to identify a target to edit. This would ensure that you get the
+correct index of the item.
+</td>
+</tr>
+</table>
+</div>
+<div id="editexpectedoutcome" class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-654">
+<p><strong>Expected outcome:</strong></p>
+</div>
+<div class="imageblock has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-657">
+<div class="content">
+<img src="images/dietTrackerEditCommandSuccessPhoto.png" alt="dietTrackerEditCommandSuccessPhoto" width="890">
+</div>
+<div class="title">Figure 13. Diet Tracker Edit Command</div>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-659">
+<p><strong>Additional notes and tips</strong><br></p>
+</div>
+<div class="admonitionblock tip has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-661">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-662">
+<p>You can list based on time period or tags to find the item that you want to edit.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3 has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-671">
+<h4 id="dietback">3.2.10. Exiting Diet Tracker to go back to main menu <code>back</code></h4>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-672">
+<p>In this section, you will learn more about the <code>back</code> command, <a href="#howtousedietbackcommand">how to use it</a>
+and the <a href="#dietbackexpectedoutcome">expected outcome</a> after using the <code>back</code> command.</p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-675">
+<p><strong>Summary of Back Command:</strong><br>
+<code>back</code> allows you to exits Diet Tracker mode to go back to main menu of the application.</p>
+</div>
+<div id="howtousedietbackcommand" class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-679">
+<p><strong>How to use the Back Command:</strong></p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-681">
+<p>Format:<br>
+<code>back</code></p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-684">
+<p>Valid Example:<br>
+<code>back</code></p>
+</div>
+<div id="dietbackexpectedoutcome" class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-688">
+<p><strong>Expected outcome:</strong></p>
+</div>
+<div class="imageblock has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-691">
+<div class="content">
+<img src="images/dietTrackerBackCommandSuccessPhoto.png" alt="dietTrackerBackCommandSuccessPhoto" width="890">
+</div>
+<div class="title">Figure 14. Diet Tracker Back Command</div>
+</div>
+<hr>
+</div>
+</div>
+<div class="sect2 has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-697">
+<h3 id="_expense_splitter_split">3.3. Expense Splitter : <code>split</code></h3>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-698">
+<p>Getting a headache from splitting <strong>that</strong> ever-so-complicated bill?</p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-700">
+<p>With EYLAH, splitting a large receipt with friends has never been easier! All you have to do is add the item,
+it&#8217;s price and the names involved in splitting that item and EYLAH will calculate the rest for you!</p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-703">
+<p>We have drawn some diagrams to help you visualize how Expense Splitter works, click <a href="#AppendixA">here</a> to find out more!</p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-706">
+<p>Here are some of the prefixes used:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-707">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Prefix</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Representation</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-i</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Item Name</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-p</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Item Price</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">-n</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name of Person</p></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<div class="sect3 has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-720">
+<h4 id="additem">3.3.1. Adding an item: <code>additem</code></h4>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-721">
+<p>In this section, you will learn more about the <code>additem</code> command, <a href="#howtouseadditemcommand">how to use it</a>
+and the <a href="#additemexpectedoutcome">expected outcome</a> after using the <code>additem</code> command.</p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-724">
+<p><strong>Summary of Add Item Command:</strong><br>
+<code>additem</code> allows you to add an item, it&#8217;s price and the persons involved in sharing the cost of that item.</p>
+</div>
+<div id="howtouseadditemcommand" class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-728">
+<p><strong>How to use the Add Item Command:</strong></p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-730">
+<p>Format:<br>
+<code>additem -i ITEMNAME -p PRICE -n NAME</code><br>
+<code>additem -i ITEMNAME -p PRICE -n NAME [-n NAME]&#8230;&#8203;</code><br></p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-734">
+<p>Valid Example:<br>
+<code>additem -i pizza -p 30 -n bob</code><br>
+<code>additem -i pasta -p 19.90 -n alice -n bob -n charlie</code></p>
+</div>
+<div id="additemexpectedoutcome" class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-739">
+<p><strong>Expected outcome:</strong></p>
+</div>
+<div class="imageblock has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-742">
+<div class="content">
+<img src="images/expensesplitteradditemexpectedoutcome.png" alt="expensesplitteradditemexpectedoutcome" width="890">
+</div>
+<div class="title">Figure 15. Expense Splitter Add Item Command</div>
+</div>
+<div class="admonitionblock note has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-745">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="ulist has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-746">
+<ul>
+<li class="has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-746">
+<p>Price can be up to 2 decimal places, i.e. 7.99.
+There is no need to add the dollar sign ($).</p>
+</li>
+<li class="has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-749">
+<p>The maximum price of an item is 10,000.</p>
+</li>
+<li class="has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-751">
+<p>All names inputted will automatically be converted to lowercase. (e.g: Bob &#8594; bob)</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3 has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-757">
+<h4 id="deleteitem">3.3.2. Deleting an item: <code>deleteitem</code></h4>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-758">
+<p>In this section, you will learn more about the <code>deleteitem</code> command, <a href="#howtousedeleteitemcommand">how to use it</a>
+and the <a href="#deleteitemexpectedoutcome">expected outcome</a> after using the <code>deleteitem</code> command.</p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-761">
+<p><strong>Summary of Delete Item Command:</strong><br>
+<code>deleteitem</code> allows you to delete an item from the receipt.</p>
+</div>
+<div id="howtousedeleteitemcommand" class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-765">
+<p><strong>How to use the Delete Item Command:</strong></p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-767">
+<p>Format:<br>
+<code>deleteitem INDEX</code><br></p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-770">
+<p>Valid Example:<br>
+<code>deleteitem 3</code></p>
+</div>
+<div id="deleteitemexpectedoutcome" class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-774">
+<p><strong>Expected outcome:</strong></p>
+</div>
+<div class="imageblock has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-777">
+<div class="content">
+<img src="images/expensesplitterdeleteitemexpectedoutcome.png" alt="expensesplitterdeleteitemexpectedoutcome" width="890">
+</div>
+<div class="title">Figure 16. Expense Splitter Delete Item Command</div>
+</div>
+<div class="admonitionblock tip has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-780">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">
+Use <code>listreceipt</code> to view your item indices before deletion.
+'''
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3 has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-785">
+<h4 id="listreceipt">3.3.3. Listing the current receipt: <code>listreceipt</code></h4>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-787">
+<p>In this section, you will learn more about the <code>listreceipt</code> command, <a href="#howtouselistreceiptcommand">how to use it</a>
+and the <a href="#listreceiptexpectedoutcome">expected outcome</a> after using the
+<code>listreceipt</code> command.</p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-791">
+<p><strong>Summary of List Receipt Command:</strong><br>
+<code>listreceipt</code> shows you all the entries in your current receipt.</p>
+</div>
+<div id="howtouselistreceiptcommand" class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-795">
+<p><strong>How to use the List Receipt Command:</strong></p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-797">
+<p>Format:<br>
+<code>listreceipt</code><br></p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-800">
+<p>Valid Example:<br>
+<code>listreceipt</code></p>
+</div>
+<div id="listreceiptexpectedoutcome" class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-804">
+<p><strong>Expected outcome:</strong></p>
+</div>
+<div class="imageblock has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-807">
+<div class="content">
+<img src="images/listreceipt.png" alt="listreceipt" width="890">
+</div>
+<div class="title">Figure 17. Expense Splitter List Receipt Command</div>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-809">
+<p><strong>Additional notes and tips</strong><br></p>
+</div>
+<div class="admonitionblock note has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-812">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Each entry in the receipt has the item&#8217;s name, price and person(s) who is splitting that item with you thus you do
+not have to remember who you split this item with!
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-817">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">
+Use <code>listreceipt</code> command to find the index of the item in the receipt. The index is useful for commands
+such as <code>deleteitem</code> where you have to pass in the index of item to be deleted.
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3 has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-825">
+<h4 id="listamount">3.3.4. Listing amounts owed by each person: <code>listamount</code></h4>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-827">
+<p>In this section, you will learn more about the <code>listamount</code> command, <a href="#howtouselistamountcommand">how to use it</a>
+and the <a href="#listamountexpectedoutcome">expected outcome</a> after using the
+<code>listamount</code> command.</p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-831">
+<p><strong>Summary of List Amount Command:</strong> <code>listamount</code> <strong>shows you how much each Person owes you</strong>.</p>
+</div>
+<div id="howtouselistamountcommand" class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-834">
+<p><strong>How to use the List Amount Command:</strong></p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-836">
+<p>Format:<br>
+<code>listamount</code><br></p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-839">
+<p>Valid example:<br>
+<code>listamount</code></p>
+</div>
+<div id="listamountexpectedoutcome" class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-843">
+<p><strong>Expected outcome:</strong></p>
+</div>
+<div class="imageblock has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-846">
+<div class="content">
+<img src="images/listamount.png" alt="listamount" width="890">
+</div>
+<div class="title">Figure 18. Expense Splitter List Amount Command</div>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-848">
+<p><strong>Additional notes and tips</strong><br></p>
+</div>
+<div class="admonitionblock note has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-851">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="ulist has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-852">
+<ul>
+<li class="has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-852">
+<p>The Person and amount owed will be automatically saved after each command.</p>
+</li>
+<li class="has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-853">
+<p>A person is deleted after they have completely paid the amount they owe you.</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-857">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">
+Use <code>listamount</code> command to find the index of the person who paid you. The index is useful for commands
+such as <code>paid</code>.
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3 has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-865">
+<h4 id="donereceipt">3.3.5. Mark receipt as done <code>donereceipt</code></h4>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-867">
+<p>In this section, you will learn more about the <code>donereceipt</code> command, <a href="#howtousedonereceiptcommand">how to use it</a>
+and the <a href="#donereceiptexpectedoutcome">expected outcome</a> after using the <code>donereceipt</code> command.</p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-870">
+<p><strong>Summary of Done Receipt Command:</strong> <code>donereceipt</code> *marks the receipt as done when you have completed entering
+all the items.</p>
+</div>
+<div id="howtousedonereceiptcommand" class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-874">
+<p><strong>How to use the Done Receipt Command:</strong></p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-876">
+<p>Format:<br>
+<code>donereceipt</code></p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-879">
+<p>Example:<br>
+<code>donereceipt</code></p>
+</div>
+<div id="donereceiptexpectedoutcome" class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-883">
+<p><strong>Expected outcome:</strong></p>
+</div>
+<div class="imageblock has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-886">
+<div class="content">
+<img src="images/donereceipt.png" alt="donereceipt" width="890">
+</div>
+<div class="title">Figure 19. Expense Splitter Done Receipt Command</div>
+</div>
+<div class="admonitionblock note has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-889">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="ulist has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-890">
+<ul>
+<li class="has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-890">
+<p>Use this command only after all Items have been correctly added to the Receipt.</p>
+</li>
+<li class="has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-891">
+<p>After you use this command, you will be unable to add any new items using the <code>additem</code> command
+or delete any items using the <code>deleteitem</code> command.</p>
+</li>
+<li class="has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-893">
+<p>However, you are now able to use the <code>paid</code> command.</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3 has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-899">
+<h4 id="paid">3.3.6. Paying money: <code>paid</code></h4>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-901">
+<p>In this section, you will learn more about the <code>paid</code> command, <a href="#howtousepaidcommand">how to use it</a> and the
+<a href="#paidcommandexpectedoutcome">expected outcome</a> after using the
+<code>paid</code> command.</p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-905">
+<p><strong>Summary of Paid Command:</strong> <code>paid</code> <strong>subtracts the amount of money a Person owes you.</strong></p>
+</div>
+<div id="howtousepaidcommand" class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-908">
+<p><strong>How to use the Paid Command:</strong></p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-910">
+<p>Format:<br></p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-912">
+<p><code>paid INDEX [AMOUNT]</code><br></p>
+</div>
+<div class="admonitionblock note has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-915">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="ulist has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-916">
+<ul>
+<li class="has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-916">
+<p><code>INDEX</code> is a <strong>compulsory</strong> field that must be stated by you. Instead of typing a Person&#8217;s name,
+you can type his/her index thus saving you time and effort. To find out his/her index, use the command
+ <code>listamount</code>.</p>
+</li>
+<li class="has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-920">
+<p><code>AMOUNT</code> is an <strong>optional</strong> field. It refers to the amount paid by that Person. Leaving this field
+empty is equivalent to the Person paying you the full amount he/she owes you.</p>
+</li>
+<li class="has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-923">
+<p><code>AMOUNT</code> can be up to 2 decimal places, i.e. 7.99.  There is no need to add the dollar sign ($).</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-926">
+<p>Valid examples:<br></p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-928">
+<p><code>paid 2</code> - This commmand means that the Person at index 2 has paid you the full amount they owe you.<br></p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-930">
+<p><code>paid 3 3.90</code> - This command means that the Perosn at index 3 has paid you $3.90.<br></p>
+</div>
+<div id="paidcommandexpectedoutcome" class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-934">
+<p><strong>Expected outcome:</strong></p>
+</div>
+<div class="imageblock has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-937">
+<div class="content">
+<img src="images/paid.png" alt="paid" width="890">
+</div>
+<div class="title">Figure 20. Expense Splitter Paid Command</div>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-939">
+<p><strong>Additional notes and tips</strong></p>
+</div>
+<div class="admonitionblock note has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-942">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="ulist has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-943">
+<ul>
+<li class="has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-943">
+<p>You will only be able to use this command after you have marked the receipt as done using the
+<code>donereceipt</code> command.</p>
+</li>
+<li class="has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-945">
+<p>The person will automatically be removed from the list if the amount he owes you drops to $0.</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-949">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Tip</div>
+</td>
+<td class="content">
+Use <code>listamount</code> command to find the index of the person who paid you.
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3 has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-956">
+<h4 id="clearreceipt">3.3.7. Clears the receipt <code>clearreceipt</code></h4>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-957">
+<p>In this section, you will learn more about the <code>clearreceipt</code> command, <a href="#howtouseclearreceiptcommand">how to use it</a>
+and the <a href="#clearreceiptexpectedoutcome">expected outcome</a> after using the <code>clearreceipt</code> command.</p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-960">
+<p><strong>Summary of Clear Receipt Command:</strong><br>
+<code>clearreceipt</code> allows you to remove all items from the receipt and start with a clean receipt.</p>
+</div>
+<div id="howtouseclearreceiptcommand" class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-964">
+<p><strong>How to use the Clear Receipt Command:</strong></p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-966">
+<p>Format:<br>
+<code>clearreceipt</code></p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-969">
+<p>Valid Example:<br>
+<code>clearreceipt</code></p>
+</div>
+<div id="clearreceiptexpectedoutcome" class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-973">
+<p><strong>Expected outcome:</strong></p>
+</div>
+<div class="imageblock has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-976">
+<div class="content">
+<img src="images/expensesplitterclearreceiptexpectedoutcome.png" alt="expensesplitterclearreceiptexpectedoutcome" width="890">
+</div>
+<div class="title">Figure 21. Expense Splitter Clear Receipt Command</div>
+</div>
+<div class="admonitionblock warning has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-979">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Warning</div>
+</td>
+<td class="content">
+<div class="ulist has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-980">
+<ul>
+<li class="has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-980">
+<p>If you use this command before marking the receipt as done via the <code>donereceipt</code> command, you will be removing all the
+previously inputting items, as well as the amount owed by each person.</p>
+</li>
+<li class="has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-982">
+<p>However, if you use this command after marking the receipt as done via the <code>donereceipt</code> command, the amount owed by
+each person will still be present and will be accessible via the <code>listamount</code> command.</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-987">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="ulist has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-988">
+<ul>
+<li class="has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-988">
+<p>After you use this command, you will be able to add new items using the <code>additem</code> command and delete items using the
+<code>deleteitem</code> command.</p>
+</li>
+<li class="has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-990">
+<p>However, you will be unable to use the <code>paid</code> command.</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<hr>
+</div>
+<div class="sect3 has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-997">
+<h4 id="splitback">3.3.8. Exiting Expense Splitter to go back to main menu <code>back</code></h4>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-998">
+<p>In this section, you will learn more about the <code>back</code> command, <a href="#howtousesplitbackcommand">how to use it</a>
+and the <a href="#splitbackexpectedoutcome">expected outcome</a> after using the <code>back</code> command.</p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-1001">
+<p><strong>Summary of Back Command:</strong><br>
+<code>back</code> allows you to exits Expense Splitter mode to go back to main menu of the application.</p>
+</div>
+<div id="howtousesplitbackcommand" class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-1005">
+<p><strong>How to use the Back Command:</strong></p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-1007">
+<p>Format:<br>
+<code>back</code></p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-1010">
+<p>Valid Example:<br>
+<code>back</code></p>
+</div>
+<div id="splitbackexpectedoutcome" class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-1014">
+<p><strong>Expected outcome:</strong></p>
+</div>
+<div class="imageblock has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-1017">
+<div class="content">
+<img src="images/expenseback.png" alt="expenseback" width="890">
+</div>
+<div class="title">Figure 22. Expense Splitter Back Command</div>
+</div>
+<hr>
+</div>
+</div>
+<div class="sect2 has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-1024">
+<h3 id="exit">3.4. Exiting the Application : <code>exit</code></h3>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-1026">
+<p>In this section, you will learn more about <code>exit</code> command, <a href="#howtouseexitcommand">how to use it</a>
+and the <a href="#exitexpectedoutcome">expected outcome</a> after using the <code>exit</code> command.</p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-1029">
+<p><strong>Summary of Exit Command:</strong><br>
+<code>exit</code> You can use this command everywhere in the application to exit.</p>
+</div>
+<div id="howtouseexitcommand" class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-1033">
+<p><strong>How to use the Exit Command:</strong></p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-1035">
+<p>Format:<br>
+<code>exit</code><br></p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-1038">
+<p>Valid Example:<br>
+<code>exit</code></p>
+</div>
+<div id="exitexpectedoutcome" class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-1042">
+<p><strong>Expected outcome:</strong></p>
+</div>
+<div class="imageblock has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-1045">
+<div class="content">
+<img src="images/exit.png" alt="exit" width="890">
+</div>
+<div class="title">Figure 23. Exit Command</div>
+</div>
+<hr>
+</div>
+<div class="sect2 has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-1050">
+<h3 id="_saving_the_data">3.5. Saving the data</h3>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-1051">
+<p>In this section, you will learn more about the saving mechanism of EYLAH.<br></p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-1053">
+<p>EYLAH will automatically help you store any information that you have inputted into the hard disk.<br>
+You <strong>do not</strong> need to save manually.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1 has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-1057">
+<h2 id="faq">4. FAQ</h2>
+<div class="sectionbody">
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-1058">
+<p><strong>Q</strong>: How do I transfer my data to another Computer?<br>
+<strong>A</strong>: Install the app in the other computer and overwrite the empty data file it creates with the file that contains the data of your previous EYLAH folder.</p>
+</div>
+</div>
+</div>
+<div class="sect1 has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-1062">
+<h2 id="command-summary">5. Command Summary</h2>
+<div class="sectionbody">
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-1063">
+<p>In this section, you can find out more about the commands supported by EYLAH, as well as their respective format and
+example.</p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-1066">
+<p>If you would like to know more about a specific command, simply click on the provided links in the table below and you
+will be brought to the respective command.</p>
+</div>
+<div class="sect2 has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-1070">
+<h3 id="_for_diet_tracker">5.1. For Diet Tracker</h3>
+<table class="tableblock frame-all grid-all stretch has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-1072">
+<caption class="title">Table 2. Summary of Command for Diet Tracker</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Command</th>
+<th class="tableblock halign-left valign-top">Format</th>
+<th class="tableblock halign-left valign-top">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#addfood"><strong>Adding Food</strong></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>add -n NAME -c CALORIES [-t TAGS]</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>add -n salad -c 235</code><br>
+<code>add -n fries -c 195 -t fastfood</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#deletefooditem"><strong>Deleting Food</strong></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>delete INDEX</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>delete 1</code><br>
+<code>delete 2</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#editfooditem"><strong>Editing Food</strong></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>edit -i INDEX [-n NAME] [-c CALORIES]</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>edit -i 1 -n carbonara -c 543</code><br>
+<code>edit -i 2 -n chips</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#listfooditem"><strong>Listing Food</strong></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>list [-a] [-d NUMDAYS] [-t TAG]</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>list</code><br>
+or<br>
+<code>list -a</code><br>
+or<br>
+<code>list -d 6</code><br>
+or<br>
+<code>list -t healthy</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#mode"><strong>Setting Mode</strong></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mode MODE</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>mode -l</code><br>
+or<br>
+<code>mode -g</code><br>
+or<br>
+<code>mode -h</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#height"><strong>Storing Height</strong></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>height HEIGHT</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>height 165</code><br>
+<code>height 172.5</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#weight"><strong>Storing Weight</strong></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>weight WEIGHT</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>weight 69</code><br>
+<code>weight 67.3</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#metrics"><strong>Showing Metrics</strong></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>metrics</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>metrics</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#calculatebmi"><strong>Calculating BMI</strong></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>bmi [-h HEIGHT] [-w WEIGHT]</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>bmi</code><br>
+or<br>
+<code>bmi -h 172 -w 65.5</code><br>
+or<br>
+<code>bmi -h 172</code><br>
+or
++
+<code>bmi -w 65.7</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#help"><strong>Getting Help</strong></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>help</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>help</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#dietback"><strong>Going Back</strong></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>back</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>back</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#exit"><strong>Exiting the Application</strong></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>exit</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>exit</code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2 has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-1148">
+<h3 id="_for_expense_splitter">5.2. For Expense Splitter</h3>
+<table class="tableblock frame-all grid-all stretch has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-1151">
+<caption class="title">Table 3. Summary of Command for Expense Splitter</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Command</th>
+<th class="tableblock halign-left valign-top">Format</th>
+<th class="tableblock halign-left valign-top">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#additem"><strong>Adding Item</strong></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>additem</code> <code>-i ITEMNAME</code> <code>-p ITEMPRICE</code> <code>-n NAME</code> <code>[-n NAME]&#8230;&#8203;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>additem</code> <code>-i pasta</code> <code>-p 5</code> <code>-n John</code><br>
+or<br>
+<code>additem</code> <code>-i pasta</code> <code>-p 32</code> <code>-n John</code> <code>-n Carl</code> <code>-n Jasmine</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#deleteitem"><strong>Deleting Item</strong></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>deleteitem</code> <code>INDEX</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>deleteitem</code> <code>1</code><br>
+or<br>
+<code>deleteitem</code> <code>2</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#listreceipt"><strong>Listing Receipt</strong></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>listreceipt</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>listreceipt</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#listamount"><strong>Listing Amount</strong></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>listamount</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>listamount</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#donereceipt"><strong>Marking Receipt as Done</strong></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>donereceipt</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>donereceipt</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#paid"><strong>Getting Paid by Someone</strong></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>paid</code> <code>INDEX</code> <code>[AMOUNT]</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>paid</code> <code>3</code> <br>
+or<br>
+<code>paid</code> <code>3</code> <code>10.00</code><br>
+or<br>
+<code>paid</code> <code>2</code> <code>10.0</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#clearreceipt"><strong>Clearing Receipt</strong></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>clearreceipt</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>clearreceipt</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#help"><strong>Getting Help</strong></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>help</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>help</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#splitback"><strong>Going Back</strong></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>back</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>back</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#exit"><strong>Exiting the Application</strong></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>exit</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>exit</code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1 has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-1206">
+<h2 id="glossary">6. Glossary</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-1210">
+<caption class="title">Table 4. Glossary</caption>
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 40%;">
+<col style="width: 40%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Term</th>
+<th class="tableblock halign-left valign-top">Explanation</th>
+<th class="tableblock halign-left valign-top">Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Temasek Hall</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">This refers the one of the Halls of Residences in the National University of Singapore</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Halls of Residences</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">This refers to student accommodation on campus</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NUS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">This is the short form of National University of Singapore.</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SOC or SoC</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">This is the short form for School of Computing.</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CLI</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">This is the short form for Command Line Interface. It processes commands to
+TA-Tracker in the form of lines of text</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Index</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">This refers to the position of an item on a list.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Index of 1 refers to the first
+item in a list.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Activity Diagram</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">This refers to the workflow of a software.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#AppendixA">Appendix</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1 has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-1232">
+<h2 id="AppendixA">7. Appendix: Simple activity diagram to aid you with using Expense Splitter<br></h2>
+<div class="sectionbody">
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-1234">
+<p>This diagram will help you understand the flow of Expense Splitter thus improving your user experience.</p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-1236">
+<p>The fully blackened circle at the top represents the start point while the circle
+at the bottom represents the end point.</p>
+</div>
+<div class="imageblock has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-1240">
+<div class="content">
+<img src="images/ExpenseSplitterActivityDiagramV2.png" alt="ExpenseSplitterActivityDiagramV2" width="890">
+</div>
+<div class="title">Figure 24. Expense Splitter Activity Diagram</div>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-1242">
+<p><strong>Simplified Add Item Activity Diagram</strong> <br></p>
+</div>
+<div class="paragraph has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-1244">
+<p>This diagram below is used in conjunction with the diagram directly above this.</p>
+</div>
+<div class="imageblock has-source-line data-line-/Users/ailanthustng/Documents/NUS/Year 2/Sem 2/CS2103T/team-project/main/docs/UserGuide.adoc-1247">
+<div class="content">
+<img src="images/ExpenseSplitterActivityDiagram.png" alt="ExpenseSplitterActivityDiagram" width="890">
+</div>
+<div class="title">Figure 25. Simplified Add Item Activity Diagram</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2020-04-16 21:41:27 +0800
+</div>
+</div>
+</body>
+</html>
