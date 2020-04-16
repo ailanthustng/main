@@ -116,8 +116,11 @@ e.g. typing *`help`* and pressing kbd:[Enter] will show you the commands you can
 [[Features]]
 == Features
 
-In this section, you can find *all* the commands of EYLAH and some tips and trick you can use to improve your user
+In this section, you can find *all* the commands of EYLA together with
+some tips and tricks you can use to improve your user
 experience while using EYLAH.
+
+.This table shows you a summary of commands in EYLAH.
 
 [cols= "50%, 50%"]
 
@@ -159,16 +162,20 @@ experience while using EYLAH.
 |===
 
 ====
-*Command Format*
+*Command Format* +
+preface..
 
-* Words in `UPPER_CASE` are the parameters supplied by the user,
-e.g: in `additem -i ITEMNAME -p ITEMPRICE -n NAME`,
-`ITEMNAME`, `ITEMPRICE` and `NAME` are parameters which can decided by the user,
-e.g: `additem -i pizza -p 19.90 -n charlotte`.
-* Items in square brackets are optional, e.g: `paid INDEX [AMOUNT]` can be used as `paid 1` or as
+* Words in `UPPER_CASE` are the parameters supplied by you. +
+e.g: in `additem -i ITEMNAME -p ITEMPRICE -n NAME`. +
+`ITEMNAME`, `ITEMPRICE` and `NAME` are parameters which can decided by you,
+
+* Items in square brackets are optional. +
+ e.g: `paid INDEX [AMOUNT]` can be used as `paid 1` or as
 `paid 1 3.90`.
-* Parameters with `…`​ after them can be used multiple times including zero times, e.g: `[-n NAME]...` can be used as `{nbsp}`
-(i.e. 0 times), `-n Charlotte`, `-n Alice -n Bob` etc.
+
+* Parameters with `…`​ after them can be used multiple times including zero times. +
+e.g: `[-n NAME]...` can be used as
+`-n Charlotte`, `-n Alice` `-n Bob` or you can leave it empty.
 ====
 
 //tag::help[]
