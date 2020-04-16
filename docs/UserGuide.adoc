@@ -778,6 +778,7 @@ image::expensesplitterdeleteitemexpectedoutcome.png[width="890"]
 
 [TIP]
 Use `listreceipt` to view your item indices before deletion.
+
 //end::deleteitem[]
 '''
 //tag::listreceipt[]
@@ -849,7 +850,7 @@ image::listamount.png[width="890"]
 
 [NOTE]
 ====
-* The Person and amount owed will be automatically saved after each command.
+* The person and the amount they owe you will be automatically saved after each command.
 * A person is deleted after they have completely paid the amount they owe you.
 ====
 
@@ -888,10 +889,13 @@ image::donereceipt.png[width="890"]
 [NOTE]
 ====
 * Use this command only after all Items have been correctly added to the Receipt.
-* After you use this command, you will be unable to add any new items using the `additem` command
-or delete any items using the `deleteitem` command.
 * However, you are now able to use the `paid` command.
 ====
+
+[WARNING]
+After you use this command, you will be unable to add any new items using the `additem` command
+or delete any items using the `deleteitem` command.
+
 //end::donereceipt[]
 '''
 //tag::paid[]
@@ -913,21 +917,21 @@ Format: +
 
 [NOTE]
 ====
-* `INDEX` is a *compulsory* field that must be stated by you. Instead of typing a Person's name,
+* `INDEX` is a *compulsory* field that must be stated by you. Instead of typing a person's name,
 you can type his/her index thus saving you time and effort. To find out his/her index, use the command
  `listamount`.
 
-* `AMOUNT` is an *optional* field. It refers to the amount paid by that Person. Leaving this field
-empty is equivalent to the Person paying you the full amount he/she owes you.
+* `AMOUNT` is an *optional* field. It refers to the amount paid by that person. Leaving this field
+empty is equivalent to the person paying you the full amount he/she owes you.
 
 * `AMOUNT` can be up to 2 decimal places, i.e. 7.99.  There is no need to add the dollar sign ($).
 ====
 
 Valid examples: +
 
-`paid 2` - This commmand means that the Person at index 2 has paid you the full amount they owe you. +
+`paid 2` - This command means that the person at index 2 has paid you the full amount they owe you. +
 
-`paid 3 3.90` - This command means that the Perosn at index 3 has paid you $3.90. +
+`paid 3 3.90` - This command means that the person at index 3 has paid you $3.90. +
 
 
 [[paidcommandexpectedoutcome]]
@@ -978,7 +982,7 @@ image::expensesplitterclearreceiptexpectedoutcome.png[width="890"]
 [WARNING]
 ====
 * If you use this command before marking the receipt as done via the `donereceipt` command, you will be removing all the
-previously inputting items, as well as the amount owed by each person.
+previously inputting items, as well as the amount owed by each person in this receipt.
 * However, if you use this command after marking the receipt as done via the `donereceipt` command, the amount owed by
 each person will still be present and will be accessible via the `listamount` command.
 ====
