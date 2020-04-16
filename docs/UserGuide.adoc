@@ -21,11 +21,13 @@ By: `AY1920S2-CS2103T-W13-1`      Since: `Feb 2020`
 [[intro]]
 == Introduction
 //tag::intro[]
-This user guide provides in-depth documentation on the EYLAH desktop application. It comprises of 7 main portions,
+
+Greetings! Welcome to EYLAH's User Guide.
+
+This user guide provides in-depth guide for you to aid you in using the
+EYLAH desktop application. This guide comprises of 7 main portions,
 the <<intro, introduction>>, <<getting-started, getting started>>, <<Features,features>>, <<faq, FAQ>>,
 <<command-summary, command summary>>, <<glossary, glossary>> and <<AppendixA, appendix>>.
-
-Hello there! Welcome to EYLAH's User Guide.
 
 Are you someone who *lives in Temasek Hall* in the National University of Singapore (NUS) and
 has *supper frequently with your hall mates?* Do experience *splitting headaches when splitting large bills amongst
@@ -95,13 +97,12 @@ website.
 Need help setting up EYLAH? Simply follow the steps below to get started in no time!
 
 .  Ensure you have `Java 11` or above installed in your Computer.
-.  Download the latest `EYLAH.jar` link:{repoURL}/releases[here].
+.  Download the latest `CS2103-W13-1.EYLAH.jar` link:{repoURL}/releases[here].
 .  Copy the file to the folder you want to use as the home folder for EYLAH.
-.  Navigate to the folder in terminal and to run the jar file type `java -jar EYLAH.jar`.
-+
-
-+
-.  Type the command in the command box and press kbd:[Enter] to execute it. +
+.  Navigate to the folder using terminal and to run the jar file type `java -jar CS2103-W13-1.EYLAH.jar` to start
+EYLAH.
+. You should see an image similar to Figure 1 above.
+Type your command in the space below Enter command and press kbd:[Enter] to execute it. +
 e.g. typing *`help`* and pressing kbd:[Enter] will show you the commands you can type.
 .  Some example commands you can try:
 
@@ -115,8 +116,11 @@ e.g. typing *`help`* and pressing kbd:[Enter] will show you the commands you can
 [[Features]]
 == Features
 
-In this section, you can find *all* the commands of EYLAH and some tips and trick you can use to improve your user
+In this section, you can find *all* the commands of EYLA together with
+some tips and tricks you can use to improve your user
 experience while using EYLAH.
+
+.This table shows you a summary of commands in EYLAH.
 
 [cols= "50%, 50%"]
 
@@ -158,16 +162,20 @@ experience while using EYLAH.
 |===
 
 ====
-*Command Format*
+*Command Format* +
+preface..
 
-* Words in `UPPER_CASE` are the parameters supplied by the user,
-e.g: in `additem -i ITEMNAME -p ITEMPRICE -n NAME`,
-`ITEMNAME`, `ITEMPRICE` and `NAME` are parameters which can decided by the user,
-e.g: `additem -i pizza -p 19.90 -n charlotte`.
-* Items in square brackets are optional, e.g: `paid INDEX [AMOUNT]` can be used as `paid 1` or as
+* Words in `UPPER_CASE` are the parameters supplied by you. +
+e.g: in `additem -i ITEMNAME -p ITEMPRICE -n NAME`. +
+`ITEMNAME`, `ITEMPRICE` and `NAME` are parameters which can decided by you,
+
+* Items in square brackets are optional. +
+ e.g: `paid INDEX [AMOUNT]` can be used as `paid 1` or as
 `paid 1 3.90`.
-* Parameters with `…`​ after them can be used multiple times including zero times, e.g: `[-n NAME]...` can be used as `{nbsp}`
-(i.e. 0 times), `-n Charlotte`, `-n Alice -n Bob` etc.
+
+* Parameters with `…`​ after them can be used multiple times including zero times. +
+e.g: `[-n NAME]...` can be used as
+`-n Charlotte`, `-n Alice` `-n Bob` or you can leave it empty.
 ====
 
 //tag::help[]
@@ -196,12 +204,12 @@ Valid Example: +
 *Main Menu:*
 
 .Main Menu Help
-image::main_help.png[width="890"]
+image::main_help.png[width="890", height="300"]
 
 *Diet Tracker Mode:*
 
 .Diet Tracker Help
-image::diethelp.png[width="890"]
+image::diethelp.png[width="890",height="300"]
 
 *Expense Splitter Mode:*
 
