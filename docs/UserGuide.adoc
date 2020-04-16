@@ -204,12 +204,12 @@ Valid Example: +
 *Main Menu:*
 
 .Main Menu Help
-image::main_help.png[width="890", height="300"]
+image::main_help.png[width="890"]
 
 *Diet Tracker Mode:*
 
 .Diet Tracker Help
-image::diethelp.png[width="890",height="300"]
+image::diethelp.png[width="890"]
 
 *Expense Splitter Mode:*
 
@@ -695,22 +695,22 @@ image::dietTrackerBackCommandSuccessPhoto.png[width="890"]
 
 //tag::introtoexpensesplitter[]
 === Expense Splitter : `split`
-Getting a headache from splitting *that* ever-so-complicated bill?
+Are you getting a headache from splitting *that* ever-so-complicated bill?
 
 With EYLAH, splitting a large receipt with friends has never been easier! All you have to do is add the item,
 it's price and the names involved in splitting that item and EYLAH will calculate the rest for you!
 
-We have drawn some diagrams to help you visualize how Expense Splitter works, click <<AppendixA, here>> to find out more!
+We have drawn some diagrams to help you visualize the workflow of
+Expense Splitter. Click <<AppendixA, here>> to find out more!
 
 
-Here are some of the prefixes used:
+Here are some of the prefixes used in Expense Splitter:
 |===
 |*Prefix* | *Representation*
 | -i | Item Name
 | -p | Item Price
 | -n | Name of Person
 |===
-
 
 
 '''
